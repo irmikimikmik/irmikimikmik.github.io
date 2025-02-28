@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="assets/resume.pdf" download class="resume-button">Resume</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Hi! This is a template to get you started on your personal website. Edit
+        this section with your information, such as a short bio, your interests,
+        and what you do.
+      </p>
+      <p>
+        This template was created for the Linked & Launch Workshop organized by
+        Women in Computer Science at UBC.
+      </p>
+    </section>
+
+    <section id="sideQuests">
+      <h2>Side Quests</h2>
+      <p>Replace the quests below with your own!</p>
+      <div class="sideQuests-container">
+        <div class="sideQuests">
+          <h3>Figure Skating</h3>
+          <p>
+            Hehe
+          </p>
+        </div>
+        <div class="sideQuests">
+          <h3>Spotify playlists</h3>
+          <p>
+            I like music.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="electives">
+      <h2>Electives I've Taken at College That Blew My Mind</h2>
+      <p>Replace the quests below with your own!</p>
+      <div class="electives-container">
+        <div class="electives">
+          <h3>Figure Skating</h3>
+          <p>
+            Hehe
+          </p>
+        </div>
+        <div class="sideQuests">
+          <h3>Spotify playlists</h3>
+          <p>
+            I like music.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Replace the projects below with your own!</p>
+      <div class="project-container">
+        <div class="project">
+          <h3>Personal Website</h3>
+          <p>
+            This is the personal website template you are currently editing!
+            It’s a simple, responsive portfolio built using HTML, CSS, and
+            customizable with JavaScript. It helps showcase your projects and
+            professional experience.
+          </p>
+        </div>
+        <div class="project">
+          <h3>Another Project</h3>
+          <p>
+            Add more details about your other projects. This is a great way to
+            showcase your work!
+          </p>
+        </div>
+        <div class="project">
+          <h3>Another Project 2</h3>
+          <p>
+            Add more details about your other projects. This is a great way to
+            showcase your work!
+          </p>
+        </div>
+        <div class="project">
+          <h3>Another Project 3</h3>
+          <p>
+            Add more details about your other projects. This is a great way to
+            showcase your work!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2>Work Experience</h2>
+      <p>
+        Edit this section with your work experience. If you don’t have work
+        experience yet, you can add projects, volunteering, or personal
+        initiatives!
+      </p>
+      <div class="work-container">
+        <div class="work-item">
+          <h3>Software Engineer Intern</h3>
+          <p><strong>Company Name</strong></p>
+          <p>Developed features for a mobile application and improved UI/UX.</p>
+        </div>
+        <div class="work-item">
+          <h3>Front-End Developer</h3>
+          <p><strong>Startup Name</strong></p>
+          <p>
+            Designed and built the front-end for a scalable web application.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Edit your contact details below:</p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">
+          <img src="assets/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/YOUR-GITHUB" target="_blank">
+          <img src="assets/github.svg" alt="GitHub" />
+        </a>
+        <a href="mailto:YOUR-EMAIL">
+          <img src="assets/mail.svg" alt="Email" />
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="year"></span> UBC WiCS</p>
+      <p>Template created with ChatGPT for Linked & Launch Workshop</p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
