@@ -1,163 +1,779 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Personal Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <a href="assets/resume.pdf" download class="resume-button">Resume</a>
-        </li>
-      </ul>
-    </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guzide Irmak Bayir - Software Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/experience.css">
+    <link rel="stylesheet" href="styles/education.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation"></nav>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        Hi! This is a template to get you started on your personal website. Edit
-        this section with your information, such as a short bio, your interests,
-        and what you do.
-      </p>
-      <p>
-        This template was created for the Linked & Launch Workshop organized by
-        Women in Computer Science at UBC.
-      </p>
-    </section>
+    <!-- Hero Section -->
+    <section class="hero" id="about"></section>
 
-    <section id="sideQuests">
-      <h2>Side Quests</h2>
-      <p>Replace the quests below with your own!</p>
-      <div class="sideQuests-container">
-        <div class="sideQuests">
-          <h3>Figure Skating</h3>
-          <p>
-            Hehe
-          </p>
-        </div>
-        <div class="sideQuests">
-          <h3>Spotify playlists</h3>
-          <p>
-            I like music.
-          </p>
-        </div>
-      </div>
-    </section>
+    <!-- Projects Section -->
+    <section id="projects"></section>
 
-    <section id="electives">
-      <h2>Electives I've Taken at College That Blew My Mind</h2>
-      <p>Replace the quests below with your own!</p>
-      <div class="electives-container">
-        <div class="electives">
-          <h3>Figure Skating</h3>
-          <p>
-            Hehe
-          </p>
-        </div>
-        <div class="sideQuests">
-          <h3>Spotify playlists</h3>
-          <p>
-            I like music.
-          </p>
-        </div>
-      </div>
-    </section>
+    <!-- Experience Section -->
+    <section id="experience"></section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>Replace the projects below with your own!</p>
-      <div class="project-container">
-        <div class="project">
-          <h3>Personal Website</h3>
-          <p>
-            This is the personal website template you are currently editing!
-            It’s a simple, responsive portfolio built using HTML, CSS, and
-            customizable with JavaScript. It helps showcase your projects and
-            professional experience.
-          </p>
-        </div>
-        <div class="project">
-          <h3>Another Project</h3>
-          <p>
-            Add more details about your other projects. This is a great way to
-            showcase your work!
-          </p>
-        </div>
-        <div class="project">
-          <h3>Another Project 2</h3>
-          <p>
-            Add more details about your other projects. This is a great way to
-            showcase your work!
-          </p>
-        </div>
-        <div class="project">
-          <h3>Another Project 3</h3>
-          <p>
-            Add more details about your other projects. This is a great way to
-            showcase your work!
-          </p>
-        </div>
-      </div>
-    </section>
+    <!-- Education Section -->
+    <section id="education"></section>
 
-    <section id="work">
-      <h2>Work Experience</h2>
-      <p>
-        Edit this section with your work experience. If you don’t have work
-        experience yet, you can add projects, volunteering, or personal
-        initiatives!
-      </p>
-      <div class="work-container">
-        <div class="work-item">
-          <h3>Software Engineer Intern</h3>
-          <p><strong>Company Name</strong></p>
-          <p>Developed features for a mobile application and improved UI/UX.</p>
-        </div>
-        <div class="work-item">
-          <h3>Front-End Developer</h3>
-          <p><strong>Startup Name</strong></p>
-          <p>
-            Designed and built the front-end for a scalable web application.
-          </p>
-        </div>
-      </div>
-    </section>
+    <!-- Contact Section -->
+    <section id="contact"></section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Edit your contact details below:</p>
-      <div class="contact-links">
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">
-          <img src="assets/linkedin.svg" alt="LinkedIn" />
-        </a>
-        <a href="https://github.com/YOUR-GITHUB" target="_blank">
-          <img src="assets/github.svg" alt="GitHub" />
-        </a>
-        <a href="mailto:YOUR-EMAIL">
-          <img src="assets/mail.svg" alt="Email" />
-        </a>
-      </div>
-    </section>
+    <!-- Footer -->
+    <footer id="footer"></footer>
 
-    <footer>
-      <p>&copy; <span id="year"></span> UBC WiCS</p>
-      <p>Template created with ChatGPT for Linked & Launch Workshop</p>
-    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/hero.js"></script>
+    <script src="js/components/projects.js"></script>
+    <script src="js/components/experience.js"></script>
+    <script src="js/components/education.js"></script>
+    <script src="js/components/contact.js"></script>
+    <script src="js/components/footer.js"></script>
+    <script src="js/main.js"></script>
+
+    <style>
+        /* CSS Variables */
+        :root {
+          --primary-color: #6366f1;
+          --primary-dark: #4f46e5;
+          --secondary-color: #8b5cf6;
+          --accent-color: #06b6d4;
+          --background-color: #0f172a;
+          --surface-color: #1e293b;
+          --text-color: #e2e8f0;
+          --text-muted: #94a3b8;
+          --hover-color: #f59e0b;
+          --font-family: "Inter", sans-serif;
+          
+          --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+          --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+          --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+          --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+          --gradient-card: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+        }
+
+        /* Base Styles */
+        body {
+          font-family: var(--font-family);
+          background: var(--gradient-hero);
+          margin: 0;
+          padding: 0;
+          scroll-behavior: smooth;
+          color: var(--text-color);
+          min-height: 100vh;
+          margin-left: 250px; /* Account for fixed nav */
+        }
+
+        body::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: 
+            radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 40% 40%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+          pointer-events: none;
+          z-index: -1;
+        }
+
+        /* Navigation - Left Panel */
+        nav {
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 250px;
+          height: 100vh;
+          background: var(--gradient-primary);
+          padding: 30px 20px;
+          backdrop-filter: blur(10px);
+          border-right: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+          z-index: 1000;
+          overflow-y: auto;
+        }
+
+        nav ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        nav ul li {
+          display: block;
+          width: 100%;
+        }
+
+        nav ul li a {
+          color: white;
+          text-decoration: none;
+          padding: 15px 20px;
+          display: block;
+          transition: all 0.3s ease;
+          border-radius: 8px;
+          font-weight: 500;
+        }
+
+        nav ul li a:hover {
+          background: var(--gradient-secondary);
+          transform: translateX(5px);
+        }
+
+        .resume-button {
+          display: block;
+          width: 100%;
+          padding: 15px 20px;
+          background: var(--gradient-accent);
+          color: white;
+          text-decoration: none;
+          font-weight: 600;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+          text-align: center;
+          margin-top: 20px;
+        }
+
+        .resume-button:hover {
+          transform: translateX(5px);
+          box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        /* Section Styles */
+        section {
+          padding: 50px;
+          max-width: 900px;
+          margin: auto;
+        }
+
+        h2 {
+          font-size: 2.5rem;
+          margin-bottom: 40px;
+          text-align: center;
+          background: var(--gradient-secondary);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+          text-align: center;
+          padding: 120px 50px 100px;
+          background: var(--gradient-hero);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .hero::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: 
+            radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+            radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+          pointer-events: none;
+        }
+
+        .hero > * {
+          position: relative;
+          z-index: 1;
+        }
+
+        .hero h1 {
+          font-size: 4rem;
+          margin-bottom: 20px;
+          background: var(--gradient-primary);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          font-weight: 700;
+        }
+
+        .hero p {
+          font-size: 1.3rem;
+          margin-bottom: 40px;
+          line-height: 1.7;
+          color: var(--text-muted);
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .skills-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 15px;
+          margin: 30px 0;
+          text-align: left;
+        }
+
+        .skill-item {
+          background: var(--gradient-card);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 20px;
+          border-radius: 12px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+          font-size: 0.95rem;
+          transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+          border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        /* Projects Section */
+        .project-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 20px;
+        }
+
+        .project {
+          background: var(--gradient-card);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 25px;
+          border-radius: 16px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+          transition: all 0.3s ease;
+        }
+
+        .project:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+          border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .project h3 {
+          margin-bottom: 12px;
+          background: var(--gradient-secondary);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          font-weight: 600;
+        }
+
+        .project .tech-stack {
+          font-style: italic;
+          color: var(--accent-color);
+          margin-bottom: 12px;
+          font-weight: 500;
+        }
+
+        .project .date {
+          font-size: 0.9rem;
+          color: var(--text-muted);
+          margin-bottom: 15px;
+        }
+
+        .project a {
+          color: var(--accent-color);
+          text-decoration: none;
+          font-weight: 500;
+        }
+
+        .project a:hover {
+          background: var(--gradient-accent);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        /* Work Experience */
+        .work-container {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .work-item {
+          background: var(--gradient-card);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 25px;
+          border-radius: 16px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+          transition: all 0.3s ease;
+        }
+
+        .work-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+          border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .work-item h3 {
+          margin-bottom: 8px;
+          background: var(--gradient-primary);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          font-weight: 600;
+        }
+
+        .work-item .company {
+          font-weight: 600;
+          color: var(--accent-color);
+        }
+
+        .work-item .date {
+          font-style: italic;
+          color: var(--text-muted);
+          margin-bottom: 15px;
+        }
+
+        .work-item p {
+          margin: 5px 0;
+        }
+
+        .work-item ul {
+          margin: 10px 0;
+          padding-left: 20px;
+        }
+
+        .work-item li {
+          margin: 5px 0;
+          line-height: 1.5;
+        }
+
+        /* Education */
+        .education-item {
+          background: var(--gradient-card);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 25px;
+          border-radius: 16px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+          transition: all 0.3s ease;
+        }
+
+        .education-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+          border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .education-item h3 {
+          background: var(--gradient-secondary);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          margin-bottom: 8px;
+          font-weight: 600;
+        }
+
+        .education-item .degree {
+          font-weight: 600;
+          margin-bottom: 8px;
+          color: var(--accent-color);
+        }
+
+        .education-item .date {
+          font-style: italic;
+          color: var(--text-muted);
+          margin-bottom: 15px;
+        }
+
+        /* Contact */
+        .contact-links {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          margin-top: 10px;
+        }
+
+        .contact-links a {
+          display: inline-block;
+          padding: 12px 24px;
+          background: var(--gradient-primary);
+          color: white;
+          text-decoration: none;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+          font-weight: 500;
+        }
+
+        .contact-links a:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Footer */
+        footer {
+          text-align: center;
+          padding: 30px;
+          background: var(--gradient-primary);
+          color: white;
+          margin-top: 50px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+          nav {
+            width: 100%;
+            height: auto;
+            position: relative;
+            padding: 15px;
+          }
+
+          nav ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+          }
+
+          nav ul li {
+            flex: 1;
+            min-width: 120px;
+          }
+
+          nav ul li a {
+            padding: 10px 15px;
+            font-size: 0.9rem;
+          }
+
+          .resume-button {
+            margin-top: 10px;
+            padding: 12px 20px;
+          }
+
+          body {
+            margin-left: 0;
+          }
+
+          .project-container {
+            grid-template-columns: 1fr;
+          }
+
+          .hero h1 {
+            font-size: 2.5rem;
+          }
+
+          .hero p {
+            font-size: 1.1rem;
+          }
+
+          .skills-grid {
+            grid-template-columns: 1fr;
+          }
+
+          h2 {
+            font-size: 2rem;
+          }
+
+          section {
+            padding: 30px 20px;
+          }
+        }
+    </style>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+        // Data Configuration
+        const portfolioData = {
+            personal: {
+                name: "Guzide Irmak Bayir",
+                title: "Software Developer",
+                description: "Software developer experienced in cloud infrastructure, distributed systems, ML models, and backend development. Recipient of Fast Track Award (SAP), and Outstanding International Student Scholarship (UBC). Teaching Assistant in AI, Finance Director of Women in CS, and National Figure Skating Champion.",
+                email: "your.email@example.com",
+                linkedin: "https://linkedin.com/in/yourprofile",
+                github: "https://github.com/irmikimikmik"
+            },
+            
+            skills: [
+                "• Data wrangling, OLAP, full-stack agile development",
+                "• Distributed systems, Redis, CI/CD",
+                "• RAG-extended LLMs for domain-specific tasks",
+                "• Teaching Assistant in Intro to AI @ UBC",
+                "• Passionate about Interpretable AI, Knowledge Graphs"
+            ],
+            
+            navigation: [
+                { href: "#about", text: "About" },
+                { href: "#projects", text: "Projects" },
+                { href: "#experience", text: "Experience" },
+                { href: "#education", text: "Education" },
+                { href: "#contact", text: "Contact" },
+                { href: "#resume", text: "Resume", class: "resume-button" }
+            ],
+            
+            projects: [
+                {
+                    title: "UniBuddy",
+                    techStack: "RAG, Chunking, LLMs, FastAPI, LangChain, React",
+                    date: "June 2025 - Ongoing",
+                    description: "Designed and built an end-to-end Retrieval-Augmented Generation (RAG) chatbot to answer university-specific questions by retrieving information from UBC CS and faculty websites. Developed a modular web crawler and data cleaner, implemented different chunking strategies, and created a scalable frontend with a context-aware chat interface.",
+                    link: null
+                },
+                {
+                    title: "PLUMAGE for YouCode Hackathon",
+                    techStack: "Node.JS, OpenAI API, NPM",
+                    date: "April 2024",
+                    description: "Engineered the backend of a retail site, creating 8 API endpoints for frontend interaction and integrating GPT-4-Vision capabilities to generate tailored color advice based on facial features (within 24 hours).",
+                    link: "https://github.com/irmikimikmik/PLUMAGE-for-YouCode2024"
+                },
+                {
+                    title: "Project Buddies",
+                    techStack: "PHP, HTML5, CSS, JavaScript, SQL/MySQL",
+                    date: "June - August 2023",
+                    description: "Developed a web-based collaboration platform for IT projects utilizing SQL/MySQL for database management, HTML5, CSS and JavaScript for the frontend, and CodeIgniter and PHP for the backend.",
+                    link: "https://github.com/irmikimikmik/ProjectCollaboratorApp"
+                },
+                {
+                    title: "Query Engine App",
+                    techStack: "TypeScript, OOP, Node.JS",
+                    date: "January - May 2022",
+                    description: "Implemented a query engine in TypeScript that validates, filters and processes datasets, utilizing Test Driven Design and Object Oriented Programming, enabling real-time analytics of all buildings, rooms and courses offered at UBC between 1990 and 2023.",
+                    link: null
+                },
+                {
+                    title: "Figure Skating Strategy App",
+                    techStack: "Java",
+                    date: "January - May 2021",
+                    description: "Implemented an algorithm that estimates figure skaters' competition scores in Java. Created abstractions, performed refactoring, and utilized JUnit for testing and JFrame for the GUI.",
+                    link: "https://github.com/irmikimikmik/FigureSkatingStrategyApp/blob/master/FigureSkatingApp.mp4"
+                }
+            ],
+            
+            experience: [
+                {
+                    title: "Agile Developer Intern (Data Wrangling)",
+                    company: "SAP Canada Inc.",
+                    date: "January 2025 -- September 2025 | Vancouver, BC, Canada",
+                    responsibilities: [
+                        "Owned a user story to disable a feature, managing full implementation and validation, and presenting the solution to international teams",
+                        "Designed and implemented a <strong>RAG-extended LLM</strong> for SAC custom expressions, integrating RLHF-inspired <strong>Proximal Policy Optimization (PPO)</strong> to boost accuracy",
+                        "Enhanced OLAP dimension mappings by delivering a full-stack feature, collaborating with cross-functional teams, and validating diverse data import scenarios",
+                        "Cut the memory usage of an error-processing SQL statement on customer systems by 70%, unblocking a customer",
+                        "Resolved three <strong>customer tickets</strong> through effective debugging, ensuring robust support"
+                    ]
+                },
+                {
+                    title: "Teaching Assistant in Introduction to AI",
+                    company: "University of British Columbia",
+                    date: "September 2024 -- June 2025 | Vancouver, BC, Canada",
+                    responsibilities: [
+                        "Authored 300+ questions on Search Algorithms, Belief Networks, Logic, CSPs, Planning, and Decision and Probability Theory",
+                        "Created diverse question formats in <strong>Python</strong> and <strong>HTML</strong> on PrairieLearn, actively deployed in practice sets, midterms, and finals across two terms"
+                    ]
+                },
+                {
+                    title: "Agile Developer Intern (Cloud Infrastructure)",
+                    company: "SAP Canada Inc.",
+                    date: "September 2022 -- April 2023 | Vancouver, BC, Canada",
+                    responsibilities: [
+                        "Received the <strong>Fast Track Award</strong>, an invitation-only talent program for top SAP iXp interns, based on manager nomination",
+                        "Enhanced system observability by setting up <strong>real-time metrics</strong> with <strong>Prometheus</strong> and <strong>Grafana</strong>, and developing alerts that prevented distributed caching (<strong>Redis</strong>) crashes",
+                        "Improved resiliency of two SAC microservices by guaranteeing startup without external cache dependencies in SAP's cloud infrastructure",
+                        "Made 135+ contributions and resolved 70+ issues, including debugging a request profiler spanning three codebases in <strong>JavaScript</strong> and <strong>TypeScript</strong>"
+                    ]
+                },
+                {
+                    title: "Finance Director",
+                    company: "Women in Computer Science at UBC",
+                    date: "May 2024 -- Present | Vancouver, BC, Canada",
+                    responsibilities: [
+                        "Led applications for <strong>$30,000 in grants</strong>, managed budgets and reimbursements, and established financial processes with the university to support gender diversity in tech",
+                        "Organized a Women in AI event and coordinated an 'Introduction to Deep Learning' workshop in collaboration with the Co-Director of the Master of Data Science program",
+                        "Closely collaborated with 50+ women to advance a more <strong>diverse, equitable, and inclusive industry</strong> through strategic events and initiatives"
+                    ]
+                },
+                {
+                    title: "Full-Stack Developer (Volunteer)",
+                    company: "Superfan",
+                    date: "January -- May 2024 | Columbus, OH, USA",
+                    responsibilities: [
+                        "Built full-stack features that analyzed listening data from the <strong>Spotify API</strong> and stored insights in a <strong>SupaBase</strong> database, powering personalized weekly recaps",
+                        "Developed the 'oldest soul' feature by ranking users based on the average release year of songs listened to, leveraging <strong>SQL</strong> queries for efficient data handling",
+                        "Implemented the backend in <strong>Node.js</strong> and frontend in <strong>React.js</strong>, integrating seamlessly with <strong>SupaBase</strong> for real-time data updates"
+                    ]
+                },
+                {
+                    title: "Professional Figure Skater and Coach",
+                    company: "Golden Skaters Figure Skating Club",
+                    date: "Jan 2011 - 2021 | Ankara, Turkey",
+                    link: "https://en.wikipedia.org/wiki/Guzide_Irmak_Bayir",
+                    responsibilities: [
+                        "4 times National Figure Skating Champion and the record-holder for the highest points received by female skater in an international competition (in home-country)",
+                        "Competed in 22+ worldwide competitions in 18 countries including European Youth Olympics Festival, and three seasons of World Junior Championships and ISU Junior Grand Prix Competitions",
+                        "Regional Coach trained by the National Coaching Certification Program of Canada"
+                    ]
+                }
+            ],
+            
+            education: {
+                school: "University of British Columbia (UBC)",
+                degree: "Bachelor of Science in Computer Science",
+                date: "September 2020 -- December 2025 (expected) | Vancouver, BC, Canada",
+                details: "On the Committee for Outreach, Diversity and Equity (CODE), recipient of the Outstanding International Student (OIS) award, and participant of the Educational Leadership (EL) Program. cGPA: 84.4%."
+            }
+        };
+
+        // Component: Navigation
+        function renderNavigation() {
+            const nav = document.getElementById('navigation');
+            const ul = document.createElement('ul');
+            
+            portfolioData.navigation.forEach(item => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = item.href;
+                a.textContent = item.text;
+                if (item.class) a.className = item.class;
+                li.appendChild(a);
+                ul.appendChild(li);
+            });
+            
+            nav.appendChild(ul);
+        }
+
+        // Component: Hero Section
+        function renderHero() {
+            const hero = document.querySelector('.hero');
+            const { personal, skills } = portfolioData;
+            
+            hero.innerHTML = `
+                <h1>${personal.name}</h1>
+                <p>${personal.description}</p>
+                <div class="skills-grid">
+                    ${skills.map(skill => `<div class="skill-item">${skill}</div>`).join('')}
+                </div>
+            `;
+        }
+
+        // Component: Projects Section
+        function renderProjects() {
+            const projectsSection = document.getElementById('projects');
+            const { projects } = portfolioData;
+            
+            const projectsHTML = `
+                <h2>Projects</h2>
+                <div class="project-container">
+                    ${projects.map(project => `
+                        <div class="project">
+                            <h3>${project.link ? `<a href="${project.link}" target="_blank">${project.title}</a>` : project.title}</h3>
+                            <div class="tech-stack">${project.techStack}</div>
+                            <div class="date">${project.date}</div>
+                            <p>${project.description}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            projectsSection.innerHTML = projectsHTML;
+        }
+
+        // Component: Experience Section
+        function renderExperience() {
+            const experienceSection = document.getElementById('experience');
+            const { experience } = portfolioData;
+            
+            const experienceHTML = `
+                <h2>Experience</h2>
+                <div class="work-container">
+                    ${experience.map(job => `
+                        <div class="work-item">
+                            <h3>${job.link ? `<a href="${job.link}" target="_blank">${job.title}</a>` : job.title}</h3>
+                            <div class="company">${job.company}</div>
+                            <div class="date">${job.date}</div>
+                            <ul>
+                                ${job.responsibilities.map(resp => `<li>${resp}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            experienceSection.innerHTML = experienceHTML;
+        }
+
+        // Component: Education Section
+        function renderEducation() {
+            const educationSection = document.getElementById('education');
+            const { education } = portfolioData;
+            
+            const educationHTML = `
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>${education.school}</h3>
+                    <div class="degree">${education.degree}</div>
+                    <div class="date">${education.date}</div>
+                    <p>${education.details}</p>
+                </div>
+            `;
+            
+            educationSection.innerHTML = educationHTML;
+        }
+
+        // Component: Contact Section
+        function renderContact() {
+            const contactSection = document.getElementById('contact');
+            const { personal } = portfolioData;
+            
+            const contactHTML = `
+                <h2>Contact</h2>
+                <p>Let's connect! I'm always open to discussing new opportunities, collaborations, or just chatting about tech and AI.</p>
+                <div class="contact-links">
+                    <a href="mailto:${personal.email}">Email</a>
+                    <a href="${personal.linkedin}" target="_blank">LinkedIn</a>
+                    <a href="${personal.github}" target="_blank">GitHub</a>
+                </div>
+            `;
+            
+            contactSection.innerHTML = contactHTML;
+        }
+
+        // Component: Footer
+        function renderFooter() {
+            const footer = document.getElementById('footer');
+            const { personal } = portfolioData;
+            
+            footer.innerHTML = `<p>&copy; 2025 ${personal.name}. All rights reserved.</p>`;
+        }
+
+        // Main App Initialization
+        function initializeApp() {
+            renderNavigation();
+            renderHero();
+            renderProjects();
+            renderExperience();
+            renderEducation();
+            renderContact();
+            renderFooter();
+        }
+
+        // Initialize the app when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializeApp);
     </script>
-  </body>
+</body>
 </html>
