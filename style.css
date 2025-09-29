@@ -1,0 +1,88 @@
+body {
+  background: no-repeat center center fixed;
+  background-size: cover;
+}
+
+.sticky-notes {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.sticky {
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #111;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.yellow { background: #fef08a; }
+.orange { background: #fdba74; }
+.pink   { background: #f9a8d4; }
+.blue   { background: #a5f3fc; }
+.green  { background: #bbf7d0; }
+
+main.container {
+  padding-left: 2rem;
+  padding-right: 1rem;
+  border-radius: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+/* style.css */
+#intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;       /* sits on top while the video is playing */
+  background: #000;
+}
+#intro video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hidden { display: none; }
+
+/* not required, but if you want to be explicit: */
+#content { position: relative; z-index: 1; }
+
+#greeter {
+  margin: 2.5rem 0 1.5rem;
+  font-size: clamp(1.6rem, 3vw + 1rem, 3rem);
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  gap: .15rem;
+  white-space: nowrap;
+}
+
+/* Blinking caret */
+#greeter .caret {
+  animation: blink 1s steps(2, start) infinite;
+  opacity: 1;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Font “themes” the script will swap in/out */
+.font-display { font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; letter-spacing: .5px; }
+.font-serif   { font-family: "Playfair Display", Georgia, "Times New Roman", serif; }
+.font-mono    { font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+#greeter .caret { color: currentColor; } /* JS will override per phrase */
+
