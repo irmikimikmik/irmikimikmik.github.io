@@ -1,82 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Guzide Irmak Bayir</title>
+  <title>Irmak Bayir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Fira+Code:wght@500&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="intro">
-    <video id="introVideo" autoplay muted playsinline>
-      <source src="intro-video.mp4" type="video/mp4">
-    </video>
-  </div>
 
-  <script src="script.js"></script>
-
-  <nav class="sticky-notes">
-    <a href="#about" class="sticky yellow">About</a>
-    <a href="#projects" class="sticky orange">Projects</a>
-    <a href="#experience" class="sticky pink">Experience</a>
-    <a href="#education" class="sticky blue">Education</a>
-    <a href="#contact" class="sticky green">Contact</a>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#about" class="nav-brand">irmak.</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <main class="container">
-    <section id="about">
-      <div id="greeter" aria-live="polite">
-        <span id="greeterText"></span>
-        <span class="caret" aria-hidden="true">|</span>
+  <main>
+
+    <!-- HERO -->
+    <section id="about" class="hero">
+      <div class="hero-text">
+        <div id="greeter" aria-live="polite">
+          <span id="greeterText"></span><span class="caret" aria-hidden="true">|</span>
+        </div>
+        <h1>Guzide Irmak Bayir</h1>
+        <p class="hero-subtitle">CS&nbsp;@&nbsp;UBC &nbsp;&middot;&nbsp; AI Research &nbsp;&middot;&nbsp; TA&nbsp;in&nbsp;Intro&nbsp;to&nbsp;AI</p>
+        <p class="hero-bio">
+          Building at the intersection of AI systems and interpretability. Research interests in
+          Knowledge Graphs, RAG architectures, and explainable ML.
+          Fast Track Award at SAP &nbsp;&middot;&nbsp; Outstanding International Student at UBC
+          &nbsp;&middot;&nbsp; National Figure Skating Champion.
+        </p>
+        <div class="hero-tags">
+          <span class="tag">Interpretable AI</span>
+          <span class="tag">Knowledge Graphs</span>
+          <span class="tag">RAG Systems</span>
+          <span class="tag">LLMs</span>
+        </div>
+        <div class="hero-links">
+          <a href="mailto:irmakbayir@gmail.com" class="icon-link" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Email
+          </a>
+          <a href="https://github.com/irmikimikmik" target="_blank" rel="noopener" class="icon-link" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/guzide-irmak-b-129a14175/" target="_blank" rel="noopener" class="icon-link" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
       </div>
-      <p>
-        Software developer experienced in cloud infrastructure, distributed systems, ML models, and backend development.
-        Recipient of Fast Track Award (SAP), and Outstanding International Student Scholarship (UBC).
-        Teaching Assistant in AI, Finance Director of Women in CS, and National Figure Skating Champion.
-      </p>
-      <ul>
-        <li>Data wrangling, OLAP, full-stack agile development</li>
-        <li>Distributed systems, Redis, CI/CD</li>
-        <li>RAG-extended LLMs for domain-specific tasks</li>
-        <li>Teaching Assistant in Intro to AI @ UBC</li>
-        <li>Passionate about Interpretable AI, Knowledge Graphs</li>
-      </ul>
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <div class="photo-inner">
+            <div class="photo-placeholder" aria-hidden="true">IB</div>
+            <img src="photo.jpg" alt="Irmak Bayir" onerror="this.style.opacity='0'">
+          </div>
+        </div>
+      </div>
+      <a href="#projects" class="scroll-hint" aria-label="Scroll down">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </a>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects">
-      <h2>Projects</h2>
-      <div id="project-list"></div>
+      <h2 class="section-title">Projects</h2>
+      <div id="project-list" class="project-grid"></div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience">
-      <h2>Experience</h2>
-      <div id="experience-list"></div>
+      <h2 class="section-title">Experience</h2>
+      <div id="experience-list" class="timeline"></div>
     </section>
 
+    <!-- EDUCATION -->
     <section id="education">
-      <h2>Education</h2>
+      <h2 class="section-title">Education</h2>
       <div id="education-block"></div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Let's connect! I'm always open to discussing new opportunities, collaborations, or just chatting about tech and AI.</p>
-      <ul>
-        <li><a href="mailto:your.irmakbayir@gmail.com">Email</a></li>
-        <li><a href="https://www.linkedin.com/in/guzide-irmak-b-129a14175/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/irmikimikmik" target="_blank">GitHub</a></li>
-      </ul>
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-intro">Let's connect &mdash; always open to research discussions, collaborations, and new opportunities.</p>
+      <div class="contact-links">
+        <a href="mailto:irmakbayir@gmail.com">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Email
+        </a>
+        <a href="https://www.linkedin.com/in/guzide-irmak-b-129a14175/" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/irmikimikmik" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+      </div>
     </section>
+
   </main>
 
-  <footer class="container">
-    <small><a href="#">© 2025 Guzide Irmak Bayir</a></small>
+  <footer>
+    <p>&copy; 2025 Guzide Irmak Bayir</p>
   </footer>
 
   <script src="data.js"></script>
   <script src="render.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

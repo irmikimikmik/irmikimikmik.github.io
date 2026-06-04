@@ -1,70 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ---- Sticky Notes (only if sections exists)
-  try {
-    const nav = document.querySelector('.sticky-notes');
-    const sections = window.sections; // may be undefined, that's ok
-    if (nav && Array.isArray(sections)) {
-      const frag = document.createDocumentFragment();
-      sections.forEach(({ id, color, label }) => {
-        const a = document.createElement('a');
-        a.href = `#${id}`;
-        a.className = `sticky ${color}`;
-        a.textContent = label;
-        frag.appendChild(a);
-      });
-      nav.appendChild(frag);
-    }
-  } catch (e) {
-    console.error('Nav render error:', e);
-  }
 
   // ---- Projects
-  try {
-    const cont = document.getElementById('project-list');
-    const data = window.projectData;
-    if (cont && Array.isArray(data)) {
-      cont.innerHTML = data.map(p => `
-        <div>
-          <h3>${p.link ? `<a href="${p.link}" target="_blank" rel="noopener noreferrer">${p.title}</a>` : p.title}</h3>
-          <p><em>${p.stack}</em> | ${p.date}</p>
-          <p>${p.desc}</p>
-        </div>
-      `).join('');
-    }
-  } catch (e) {
-    console.error('Projects render error:', e);
+  const projCont = document.getElementById('project-list');
+  if (projCont && Array.isArray(window.projectData)) {
+    projCont.innerHTML = window.projectData.map(p => `
+      <div class="project-card">
+        <h3>${p.link
+          ? `<a href="${p.link}" target="_blank" rel="noopener noreferrer">${p.title}</a>`
+          : p.title
+        }</h3>
+        <div class="project-stack">${p.stack}</div>
+        <div class="project-date">${p.date}</div>
+        <p class="project-desc">${p.desc}</p>
+      </div>
+    `).join('');
   }
 
   // ---- Experience
-  try {
-    const cont = document.getElementById('experience-list');
-    const data = window.experienceData;
-    if (cont && Array.isArray(data)) {
-      cont.innerHTML = data.map(x => `
-        <div>
-          <h3>${x.role}</h3>
-          <p><strong>${x.company}</strong> | ${x.date}</p>
-          <ul>${(x.bullets||[]).map(b=>`<li>${b}</li>`).join('')}</ul>
-        </div>
-      `).join('');
-    }
-  } catch (e) {
-    console.error('Experience render error:', e);
+  const expCont = document.getElementById('experience-list');
+  if (expCont && Array.isArray(window.experienceData)) {
+    expCont.innerHTML = window.experienceData.map(x => `
+      <div class="timeline-item">
+        <h3>${x.link
+          ? `<a href="${x.link}" target="_blank" rel="noopener noreferrer">${x.role}</a>`
+          : x.role
+        }</h3>
+        <div class="timeline-company">${x.company}</div>
+        <div class="timeline-date">${x.date}</div>
+        <ul>${(x.bullets || []).map(b => `<li>${b}</li>`).join('')}</ul>
+      </div>
+    `).join('');
   }
 
   // ---- Education
-  try {
-    const cont = document.getElementById('education-block');
-    const d = window.educationData;
-    if (cont && d) {
-      cont.innerHTML = `
-        <h3>${d.school}</h3>
-        <p class="degree">${d.degree}</p>
-        <p><em>${d.date}</em></p>
-        <p>${d.details}</p>
-      `;
-    }
-  } catch (e) {
-    console.error('Education render error:', e);
+  const eduCont = document.getElementById('education-block');
+  const edu = window.educationData;
+  if (eduCont && edu) {
+    eduCont.innerHTML = `
+      <div class="education-card">
+        <h3>${edu.school}</h3>
+        <div class="education-degree">${edu.degree}</div>
+        <div class="education-date">${edu.date}</div>
+        <p class="education-details">${edu.details}</p>
+      </div>
+    `;
   }
+
 });
