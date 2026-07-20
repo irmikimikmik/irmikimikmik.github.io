@@ -6,6 +6,51 @@ if (navbar) {
   }, { passive: true });
 }
 
+// ===== Active nav link highlighting based on current page =====
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const currentPage = location.pathname.split('/').pop() || 'index.html';
+
+  navLinks.forEach(a => {
+    const href = a.getAttribute('href');
+    a.classList.toggle('active', href === currentPage);
+  });
+
+  // Highlight the "Academics" dropdown trigger when one of its pages is current
+  const academicsPages = ['education.html', 'academic.html', 'conferences.html'];
+  const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+  if (dropdownToggle) {
+    dropdownToggle.classList.toggle('active', academicsPages.includes(currentPage));
+  }
+});
+
+// ===== Nav dropdown (Academics): click/tap to toggle, closes on outside click or Escape =====
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.dropdown').forEach(dd => {
+    const toggle = dd.querySelector('.nav-dropdown-toggle');
+    if (!toggle) return;
+
+    const close = () => {
+      dd.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = dd.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dd.contains(e.target)) close();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close();
+    });
+  });
+});
+
 // ===== Greeter: typing / deleting with per-phrase fonts & gradient colors =====
 document.addEventListener('DOMContentLoaded', () => {
   const el     = document.getElementById('greeterText');
@@ -75,24 +120,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   tick();
-
-  // ===== Active nav link highlighting via IntersectionObserver =====
-  const sections  = document.querySelectorAll('section[id]');
-  const navLinks  = document.querySelectorAll('.nav-links a');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        navLinks.forEach(a => {
-          a.classList.toggle('active', a.getAttribute('href') === `#${id}`);
-        });
-      }
-    });
-  }, {
-    rootMargin: '-35% 0px -60% 0px',
-    threshold: 0
-  });
-
-  sections.forEach(s => observer.observe(s));
 });

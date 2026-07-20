@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Athletic Achievements — Irmak Bayir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="subpage">
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">irmak.</a>
+      <ul class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li class="dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Academics
+            <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="education.html">Education</a></li>
+            <li><a href="academic.html">Academic Experience</a></li>
+            <li><a href="conferences.html">Conferences</a></li>
+          </ul>
+        </li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="industry.html">Industry</a></li>
+        <li><a href="athletics.html">Athletics</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="athletics">
+      <h2 class="section-title">Athletic Achievements and Scholarships</h2>
+      <div id="athletic-list" class="timeline"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Guzide Irmak Bayir</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="render.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,5 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ---- Generic timeline renderer (used by Academic, Industry, Community, Athletic)
+  function renderTimeline(containerId, data) {
+    const cont = document.getElementById(containerId);
+    if (!cont || !Array.isArray(data)) return;
+    cont.innerHTML = data.map(x => `
+      <div class="timeline-item">
+        <h3>${x.link
+          ? `<a href="${x.link}" target="_blank" rel="noopener noreferrer">${x.role}</a>`
+          : x.role
+        }</h3>
+        <div class="timeline-company">${x.company}</div>
+        <div class="timeline-date">${x.date}</div>
+        ${(x.bullets && x.bullets.length) ? `<ul>${x.bullets.map(b => `<li>${b}</li>`).join('')}</ul>` : ''}
+      </div>
+    `).join('');
+  }
+
   // ---- Projects
   const projCont = document.getElementById('project-list');
   if (projCont && Array.isArray(window.projectData)) {
@@ -16,34 +33,42 @@ document.addEventListener('DOMContentLoaded', () => {
     `).join('');
   }
 
-  // ---- Experience
-  const expCont = document.getElementById('experience-list');
-  if (expCont && Array.isArray(window.experienceData)) {
-    expCont.innerHTML = window.experienceData.map(x => `
+  // ---- Academic Experience
+  renderTimeline('academic-list', window.academicExperienceData);
+
+  // ---- Conferences
+  const confCont = document.getElementById('conference-list');
+  if (confCont && Array.isArray(window.conferenceData)) {
+    confCont.innerHTML = window.conferenceData.map(c => `
       <div class="timeline-item">
-        <h3>${x.link
-          ? `<a href="${x.link}" target="_blank" rel="noopener noreferrer">${x.role}</a>`
-          : x.role
-        }</h3>
-        <div class="timeline-company">${x.company}</div>
-        <div class="timeline-date">${x.date}</div>
-        <ul>${(x.bullets || []).map(b => `<li>${b}</li>`).join('')}</ul>
+        <h3>${c.event}</h3>
+        <div class="timeline-company">${c.role}</div>
+        <div class="timeline-date">${c.date}</div>
+        ${c.desc ? `<ul><li>${c.desc}</li></ul>` : ''}
       </div>
     `).join('');
   }
 
+  // ---- Industry Experience
+  renderTimeline('industry-list', window.industryExperienceData);
+
+  // ---- Community Involvement and Volunteerism
+  renderTimeline('community-list', window.communityData);
+
+  // ---- Athletic Achievements and Scholarships
+  renderTimeline('athletic-list', window.athleticData);
+
   // ---- Education
   const eduCont = document.getElementById('education-block');
-  const edu = window.educationData;
-  if (eduCont && edu) {
-    eduCont.innerHTML = `
+  if (eduCont && Array.isArray(window.educationData)) {
+    eduCont.innerHTML = window.educationData.map(edu => `
       <div class="education-card">
         <h3>${edu.school}</h3>
         <div class="education-degree">${edu.degree}</div>
         <div class="education-date">${edu.date}</div>
         <p class="education-details">${edu.details}</p>
       </div>
-    `;
+    `).join('');
   }
 
 });
