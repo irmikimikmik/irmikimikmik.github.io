@@ -1,20 +1,23 @@
 /* Indigenous Catering Budget Calculator — React app (in-browser Babel, no build step)
-   Data is fetched and parsed from master_indigenous_catering.csv at runtime — nothing
-   here is hardcoded, so updating the CSV is enough to update the tool. */
+   Data is fetched and parsed from companies.csv + items.csv at runtime — nothing
+   here is hardcoded, so updating either CSV is enough to update the tool. */
 
 const { useState, useEffect, useMemo } = React;
 
-const CSV_PATH = './master_indigenous_catering.csv';
+const COMPANIES_CSV_PATH = './companies.csv';
+const ITEMS_CSV_PATH = './items.csv';
 
-const HEADER = ['Business', 'ContactEmail', 'ContactPhone', 'ItemName', 'ItemType', 'MealType',
-  'ServingSize', 'ServingSizeUnit', 'PricePerUnit', 'TotalPrice', 'MinimumOrderAmount',
-  'MinimumOrderType', 'DeliveryAvailable', 'DeliveryMinimum', 'DeliveryZone',
-  'PickupAvailable', 'DepositPercentage', 'DepositDays', 'PaymentMethods',
-  'DietaryNotes', 'Description', 'Notes'];
+const COMPANY_HEADER = ['Business', 'ContactEmail', 'ContactPhone', 'Website', 'MinimumOrderAmount',
+  'MinimumOrderType', 'DeliveryAvailable', 'DeliveryMinimum', 'DeliveryZone', 'PickupAvailable',
+  'DepositPercentage', 'DepositDays', 'PaymentMethods', 'Description', 'Notes'];
+
+const ITEM_HEADER = ['Business', 'ItemName', 'ItemType', 'MealType', 'ServingSize', 'ServingSizeUnit',
+  'PricePerUnit', 'TotalPrice', 'MinimumOrderAmount', 'MinimumOrderType', 'DietaryNotes',
+  'Description', 'Notes'];
 
 const BIZ_ID = {
   'Friendship Catering': 'friendship',
-  'Salish Catering': 'salish',
+  'Salishan Catering': 'salish',
   'Salmon n Bannock': 'salmonnbannock',
   'Cedar Feast House': 'cedar',
 };
@@ -124,44 +127,48 @@ function parseDietary(raw) {
   };
 }
 
-function buildCateringData(csvText) {
+function rowsFromCSV(csvText, headerCols) {
   const rawRows = parseCSV(csvText).filter((r) => r.length > 1 || (r.length === 1 && r[0] !== ''));
   rawRows.shift(); // header row
-
-  const businesses = {};
-  const items = [];
-  let itemCounter = 0;
-
-  rawRows.forEach((r) => {
-    while (r.length < HEADER.length) r.push('');
+  return rawRows.map((r) => {
+    while (r.length < headerCols.length) r.push('');
     const row = {};
-    HEADER.forEach((key, idx) => { row[key] = cleanField(r[idx]); });
+    headerCols.forEach((key, idx) => { row[key] = cleanField(r[idx]); });
+    return row;
+  });
+}
 
+function buildCateringData(companiesText, itemsText) {
+  const businesses = {};
+  rowsFromCSV(companiesText, COMPANY_HEADER).forEach((row) => {
     const bizId = BIZ_ID[row.Business];
     if (!bizId) return;
+    businesses[bizId] = {
+      id: bizId,
+      name: row.Business,
+      color: BIZ_COLOR[bizId],
+      contactEmail: row.ContactEmail && row.ContactEmail !== 'N/A' ? row.ContactEmail : null,
+      contactPhone: row.ContactPhone && row.ContactPhone !== 'N/A' ? row.ContactPhone : null,
+      website: row.Website && row.Website !== 'N/A' ? row.Website : null,
+      minimumOrderAmount: row.MinimumOrderAmount === 'TBD' ? null : numOrNone(row.MinimumOrderAmount),
+      minimumOrderType: row.MinimumOrderType,
+      deliveryAvailable: boolOrNone(row.DeliveryAvailable),
+      deliveryMinimum: numOrNone(row.DeliveryMinimum),
+      deliveryZone: row.DeliveryZone && row.DeliveryZone !== 'Unknown' ? row.DeliveryZone : null,
+      pickupAvailable: boolOrNone(row.PickupAvailable),
+      depositPercentage: numOrNone(row.DepositPercentage),
+      depositDays: row.DepositDays,
+      paymentMethods: row.PaymentMethods && row.PaymentMethods !== 'Unknown' ? row.PaymentMethods : null,
+      fullNote: row.Description,
+      criticalNote: row.Notes,
+    };
+  });
 
-    if (row.ItemName === 'CATERING_CONSTRAINT') {
-      businesses[bizId] = {
-        id: bizId,
-        name: row.Business,
-        color: BIZ_COLOR[bizId],
-        contactEmail: row.ContactEmail && row.ContactEmail !== 'N/A' ? row.ContactEmail : null,
-        contactPhone: row.ContactPhone && row.ContactPhone !== 'N/A' ? row.ContactPhone : null,
-        minimumOrderAmount: row.MinimumOrderAmount === 'TBD' ? null : numOrNone(row.MinimumOrderAmount),
-        minimumOrderType: row.MinimumOrderType,
-        deliveryAvailable: boolOrNone(row.DeliveryAvailable),
-        deliveryMinimum: numOrNone(row.DeliveryMinimum),
-        deliveryZone: row.DeliveryZone && row.DeliveryZone !== 'Unknown' ? row.DeliveryZone : null,
-        pickupAvailable: boolOrNone(row.PickupAvailable),
-        depositPercentage: numOrNone(row.DepositPercentage),
-        depositDays: row.DepositDays,
-        paymentMethods: row.PaymentMethods && row.PaymentMethods !== 'Unknown' ? row.PaymentMethods : null,
-        fullNote: row.Description,
-        criticalNote: row.Notes,
-      };
-      return;
-    }
-
+  const items = [];
+  let itemCounter = 0;
+  rowsFromCSV(itemsText, ITEM_HEADER).forEach((row) => {
+    const bizId = BIZ_ID[row.Business];
+    if (!bizId) return;
     itemCounter += 1;
     items.push({
       id: `${bizId}-${itemCounter}`,
@@ -175,8 +182,6 @@ function buildCateringData(csvText) {
       totalPrice: numOrNone(row.TotalPrice),
       minimumOrderAmount: numOrNone(row.MinimumOrderAmount),
       minimumOrderType: (row.MinimumOrderType !== 'TBD' && row.MinimumOrderType !== 'Unknown') ? row.MinimumOrderType : null,
-      deliveryAvailable: boolOrNone(row.DeliveryAvailable),
-      pickupAvailable: boolOrNone(row.PickupAvailable),
       dietary: parseDietary(row.DietaryNotes),
       description: row.Description,
       notes: row.Notes,
@@ -217,6 +222,12 @@ function passesMeal(item, mealFilter) {
   return (MEAL_MATCH[mealFilter] || []).includes(item.mealType);
 }
 
+function passesSearch(item, search) {
+  const q = search.trim().toLowerCase();
+  if (q === '') return true;
+  return item.itemName.toLowerCase().includes(q) || item.description.toLowerCase().includes(q);
+}
+
 function passesDietary(item, dietary) {
   const active = Object.keys(dietary).filter((k) => dietary[k]);
   if (active.length === 0) return true;
@@ -225,10 +236,10 @@ function passesDietary(item, dietary) {
   return active.every((k) => item.dietary[k] === true);
 }
 
-function passesDelivery(item, deliveryPref) {
+function businessMeetsDeliveryPref(business, deliveryPref) {
   if (deliveryPref === 'either') return true;
-  if (deliveryPref === 'delivery') return item.deliveryAvailable !== false;
-  if (deliveryPref === 'pickup') return item.pickupAvailable !== false;
+  if (deliveryPref === 'delivery') return business.deliveryAvailable !== false;
+  if (deliveryPref === 'pickup') return business.pickupAvailable !== false;
   return true;
 }
 
@@ -284,11 +295,16 @@ function useCartComputation(cart, items, businesses, headcount) {
 
 /* ---------- Components ---------- */
 
-function FiltersPanel({ budget, setBudget, headcount, setHeadcount, mealFilter, setMealFilter, dietary, setDietary, deliveryPref, setDeliveryPref }) {
+function FiltersPanel({ search, setSearch, budget, setBudget, headcount, setHeadcount, mealFilter, setMealFilter, dietary, setDietary, deliveryPref, setDeliveryPref }) {
   const toggleDietary = (key) => setDietary((prev) => ({ ...prev, [key]: !prev[key] }));
 
   return (
     <div className="cc-filters">
+      <div className="cc-field cc-field-wide">
+        <label htmlFor="cc-search">Search menu items</label>
+        <input id="cc-search" type="text" placeholder="e.g. salmon, bannock, vegan slider"
+          value={search} onChange={(e) => setSearch(e.target.value)} />
+      </div>
       <div className="cc-field">
         <label htmlFor="cc-budget">Budget (CAD)</label>
         <input id="cc-budget" type="number" min="0" placeholder="e.g. 800"
@@ -398,22 +414,23 @@ function ItemCard({ item, qty, setQty, headcount, business }) {
   );
 }
 
-function BusinessSection({ business, items, mealFilter, dietary, deliveryPref, cart, setQty, headcount, budgetNum }) {
-  const filteredItems = items.filter((i) =>
-    passesMeal(i, mealFilter) && passesDietary(i, dietary) && passesDelivery(i, deliveryPref));
+function BusinessSection({ business, items, search, mealFilter, dietary, deliveryPref, cart, setQty, headcount, budgetNum }) {
+  const filteredItems = items.filter((i) => passesSearch(i, search) && passesMeal(i, mealFilter) && passesDietary(i, dietary));
 
   const headcountOk = businessMeetsHeadcountMin(business, headcount);
+  const deliveryOk = businessMeetsDeliveryPref(business, deliveryPref);
   const belowBudgetMin = budgetBelowMinimum(business, budgetNum);
   const hasNoItems = items.length === 0;
 
   return (
-    <div className={'cc-business' + (!headcountOk ? ' cc-business-disabled' : '')} style={{ '--biz-color': business.color }}>
+    <div className={'cc-business' + (!headcountOk || !deliveryOk ? ' cc-business-disabled' : '')} style={{ '--biz-color': business.color }}>
       <div className="cc-business-head">
         <div>
           <div className="cc-business-name"><span className="cc-dot" />{business.name}</div>
           <div className="cc-business-contact">
             {business.contactEmail && <a href={`mailto:${business.contactEmail}`}>{business.contactEmail}</a>}
             {business.contactPhone && <a href={`tel:${business.contactPhone}`}>{business.contactPhone}</a>}
+            {business.website && <a href={business.website} target="_blank" rel="noopener noreferrer">Website</a>}
           </div>
         </div>
         <div className="cc-badges">
@@ -428,6 +445,11 @@ function BusinessSection({ business, items, mealFilter, dietary, deliveryPref, c
       {!headcountOk && (
         <div className="cc-business-unavailable">
           Requires a minimum of {business.minimumOrderAmount} guests — increase headcount to unlock this caterer.
+        </div>
+      )}
+      {!deliveryOk && (
+        <div className="cc-business-unavailable">
+          {deliveryPref === 'delivery' ? 'Delivery is not available from this caterer.' : 'Pickup is not available from this caterer.'}
         </div>
       )}
       {belowBudgetMin && (
@@ -496,7 +518,8 @@ function CartSidebar({ bizSummaries, grandTotal, headcount, budgetNum, setQty })
               {b.business.depositPercentage != null && (
                 <div className="cc-cart-warn">
                   Deposit: {b.business.depositPercentage}% due at booking
-                  {b.business.depositDays && b.business.depositDays !== 'Varies' ? ` (within ${b.business.depositDays} days)` : ''}
+                  {b.business.depositDays && b.business.depositDays !== 'Varies' && Number(b.business.depositDays) > 0
+                    ? ` (within ${b.business.depositDays} days)` : ''}
                   {' '}— {fmtMoney(b.total * b.business.depositPercentage / 100)}
                 </div>
               )}
@@ -524,6 +547,7 @@ function App() {
   const [data, setData] = useState(null);
   const [loadError, setLoadError] = useState(null);
 
+  const [search, setSearch] = useState('');
   const [budget, setBudget] = useState('');
   const [headcount, setHeadcount] = useState('20');
   const [mealFilter, setMealFilter] = useState('all');
@@ -532,12 +556,12 @@ function App() {
   const [cart, setCart] = useState({});
 
   useEffect(() => {
-    fetch(CSV_PATH)
-      .then((res) => {
-        if (!res.ok) throw new Error(`Could not load ${CSV_PATH} (${res.status})`);
-        return res.text();
-      })
-      .then((text) => setData(buildCateringData(text)))
+    const fetchText = (path) => fetch(path).then((res) => {
+      if (!res.ok) throw new Error(`Could not load ${path} (${res.status})`);
+      return res.text();
+    });
+    Promise.all([fetchText(COMPANIES_CSV_PATH), fetchText(ITEMS_CSV_PATH)])
+      .then(([companiesText, itemsText]) => setData(buildCateringData(companiesText, itemsText)))
       .catch((err) => setLoadError(err.message));
   }, []);
 
@@ -567,7 +591,7 @@ function App() {
   return (
     <>
       <section className="cc-intro">
-        <div className="cc-eyebrow">UBC Student Clubs &amp; Event Organizers</div>
+        <div className="cc-eyebrow">For Event Organizers at UBC's Department of Computer Science</div>
         <h1 className="cc-title">Indigenous Catering Budget Calculator</h1>
         <p className="cc-subtitle">
           Compare menus from four Indigenous-owned Vancouver-area caterers, filter by budget, headcount,
@@ -576,11 +600,12 @@ function App() {
         <div className="cc-disclaimer">
           Menu items, prices, and policies are read live from the source spreadsheet and may be out of date.
           Treat all totals as estimates!! Please confirm final pricing, availability, and dietary details directly
-          with the caterer before booking.
+          with the caterer — by phone, email, or their website (linked on each business card below) — before booking.
         </div>
       </section>
 
       <FiltersPanel
+        search={search} setSearch={setSearch}
         budget={budget} setBudget={setBudget}
         headcount={headcount} setHeadcount={setHeadcount}
         mealFilter={mealFilter} setMealFilter={setMealFilter}
@@ -595,6 +620,7 @@ function App() {
               key={biz.id}
               business={biz}
               items={items.filter((i) => i.businessId === biz.id)}
+              search={search}
               mealFilter={mealFilter}
               dietary={dietary}
               deliveryPref={deliveryPref}
