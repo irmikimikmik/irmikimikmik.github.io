@@ -148,8 +148,8 @@ const industryExperienceData = [
 ];
 
 
-// ================== COMMUNITY INVOLVEMENT AND VOLUNTEERISM ==================
-const communityData = [
+// ================== GENDER DIVERSITY ==================
+const genderDiversityData = [
   {
     role: 'Research and Graduate Studies Liaison',
     company: 'Women in Computer Science (UBC WiCS)',
@@ -161,16 +161,6 @@ const communityData = [
     ]
   },
   {
-    role: 'Student Representative',
-    company: 'Committee for Outreach, Diversity and Equity (UBC CODE)',
-    date: 'Sept 2024 – Ongoing · Vancouver, BC',
-    bullets: [
-      'Co-organized the Indigenous Strategic Plan workshop series for student leaders, faculty, and staff',
-      'Volunteered at CEDAR, an Indigenous STEM camp for middle schoolers',
-      'Identified information inaccessibility in the admissions process and co-initiated the Advisor Help RAG chatbot project'
-    ]
-  },
-  {
     role: 'Finance Director',
     company: 'Women in Computer Science (UBC WiCS)',
     date: 'Sept 2024 – Apr 2026 · Vancouver, BC',
@@ -179,6 +169,20 @@ const communityData = [
       'Created grant guides, accounting templates, and financial procedures adopted across department affinity groups',
       'Managed budgets with 15+ corporate sponsors, supporting 40+ events reaching 600+ students with a 30+ person team',
       'Received the <strong>Club Dynamics Award</strong> from the Science Undergraduate Society'
+    ]
+  }
+];
+
+// ================== INDIGENOUS INITIATIVES ==================
+const indigenousData = [
+  {
+    role: 'Student Representative',
+    company: 'Committee for Outreach, Diversity and Equity (UBC CODE)',
+    date: 'Sept 2024 – Ongoing · Vancouver, BC',
+    bullets: [
+      'Helped coordinate the logistics of the Indigenous Strategic Plan (ISP) workshop series. The series brought together student leaders, faculty, and staff to explore opportunities for integrating Indigenous ways of knowing and being into teaching, research, and community practices',
+      'Volunteered at CEDAR, an Indigenous STEM camp for middle schoolers',
+      'Identified information inaccessibility in the admissions process and co-initiated the Advisor Help RAG chatbot project'
     ]
   }
 ];
@@ -221,6 +225,7 @@ window.projectData            = projectData;
 window.academicExperienceData = academicExperienceData;
 window.conferenceData         = conferenceData;
 window.industryExperienceData = industryExperienceData;
-window.communityData          = communityData;
+window.genderDiversityData    = genderDiversityData;
+window.indigenousData         = indigenousData;
 window.athleticData           = athleticData;
 window.educationData          = educationData;

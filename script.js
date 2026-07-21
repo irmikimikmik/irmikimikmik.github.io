@@ -16,12 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
     a.classList.toggle('active', href === currentPage);
   });
 
-  // Highlight the "Academics" dropdown trigger when one of its pages is current
-  const academicsPages = ['education.html', 'academic.html', 'conferences.html'];
-  const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
-  if (dropdownToggle) {
-    dropdownToggle.classList.toggle('active', academicsPages.includes(currentPage));
-  }
+  // Highlight each dropdown trigger when one of its listed pages is current
+  document.querySelectorAll('.nav-dropdown-toggle[data-pages]').forEach(toggle => {
+    const pages = toggle.dataset.pages.split(',');
+    toggle.classList.toggle('active', pages.includes(currentPage));
+  });
 });
 
 // ===== Nav dropdown (Academics): click/tap to toggle, closes on outside click or Escape =====
