@@ -223,14 +223,9 @@ body.subpage section {
 /* ===== HERO ===== */
 .hero {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  gap: 4rem;
   padding-top: var(--nav-h);
   position: relative;
 }
-
-.hero-text { flex: 1; min-width: 0; }
 
 /* Greeter (typing animation) */
 #greeter {
@@ -277,7 +272,6 @@ h1 {
   font-size: 0.9375rem;
   line-height: 1.75;
   margin-bottom: 1.25rem;
-  max-width: 560px;
 }
 
 .hero-tags {
@@ -329,10 +323,10 @@ h1 {
 
 /* Photo */
 .hero-photo {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  float: right;
+  margin: 0 0 1.5rem 3rem;
+  shape-outside: circle(50%);
+  shape-margin: 1rem;
 }
 
 .photo-frame {
@@ -642,15 +636,18 @@ footer {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 680px) {
   .hero {
-    flex-direction: column-reverse;
-    align-items: flex-start;
     min-height: auto;
     padding-top: calc(var(--nav-h) + 3rem);
     padding-bottom: 4rem;
-    gap: 2rem;
   }
 
-  .hero-photo { align-self: center; }
+  .hero-photo {
+    float: none;
+    shape-outside: none;
+    margin: 0 auto 2rem;
+    display: flex;
+    justify-content: center;
+  }
 
   .photo-frame { width: 150px; height: 150px; }
 
