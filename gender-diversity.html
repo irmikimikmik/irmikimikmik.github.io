@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Community Involvement — Irmak Bayir</title>
+  <title>Gender Diversity — Irmak Bayir</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
       <ul class="nav-links">
         <li><a href="index.html">About</a></li>
         <li class="dropdown">
-          <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="nav-dropdown-toggle" data-pages="education.html,academic.html,conferences.html" aria-haspopup="true" aria-expanded="false">
             Academics
             <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
@@ -27,7 +27,16 @@
             <li><a href="conferences.html">Conferences</a></li>
           </ul>
         </li>
-        <li><a href="community.html">Community</a></li>
+        <li class="dropdown">
+          <button type="button" class="nav-dropdown-toggle" data-pages="gender-diversity.html,indigenous-initiatives.html" aria-haspopup="true" aria-expanded="false">
+            Community
+            <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="gender-diversity.html">Gender Diversity</a></li>
+            <li><a href="indigenous-initiatives.html">Indigenous Initiatives</a></li>
+          </ul>
+        </li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="industry.html">Industry</a></li>
         <li><a href="athletics.html">Athletics</a></li>
@@ -37,9 +46,9 @@
   </nav>
 
   <main>
-    <section id="community">
-      <h2 class="section-title">Community Involvement and Volunteerism</h2>
-      <div id="community-list" class="timeline"></div>
+    <section id="gender-diversity">
+      <h2 class="section-title">Gender Diversity</h2>
+      <div id="gender-diversity-list" class="timeline"></div>
     </section>
   </main>
 

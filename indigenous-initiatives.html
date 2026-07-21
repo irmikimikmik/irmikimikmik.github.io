@@ -3,11 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Education — Irmak Bayir</title>
+  <title>Indigenous Initiatives — Irmak Bayir</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .tool-callout {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent-2);
+      border-radius: var(--radius);
+      padding: 1.375rem 1.5rem;
+      text-decoration: none;
+      transition: border-left-color 0.2s, background 0.2s, transform 0.2s;
+      margin-top: 1.5rem;
+    }
+    .tool-callout:hover { background: var(--surface-hover); transform: translateX(2px); }
+    .tool-callout h3 { font-size: 0.9375rem; font-weight: 600; color: var(--text); margin-bottom: 0.35rem; }
+    .tool-callout p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
+    .tool-callout .eyebrow {
+      font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-2);
+      text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.4rem; display: block;
+    }
+  </style>
 </head>
 <body class="subpage">
 
@@ -46,9 +66,15 @@
   </nav>
 
   <main>
-    <section id="education">
-      <h2 class="section-title">Education</h2>
-      <div id="education-block"></div>
+    <section id="indigenous-initiatives">
+      <h2 class="section-title">Indigenous Initiatives</h2>
+      <div id="indigenous-list" class="timeline"></div>
+
+      <a class="tool-callout" href="indigenous_catering/index.html">
+        <span class="eyebrow">Tool</span>
+        <h3>Indigenous Catering Budget Calculator</h3>
+        <p>Built for UBC student clubs and event organizers — compare menus from Indigenous-owned Vancouver-area caterers, filter by budget, headcount, and dietary needs, and build a package with a running cost estimate.</p>
+      </a>
     </section>
   </main>
 
