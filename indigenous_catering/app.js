@@ -64,6 +64,41 @@ const MEAL_MATCH = {
   Reception: ['Reception', 'Beverage', 'Dessert'],
 };
 
+// A business's items are only grouped into collapsible subcategories once there
+// are enough of them to need it (Salishan has 161; the others have 11-33).
+const GROUP_THRESHOLD = 15;
+
+const GROUP_LABELS = {
+  Breakfast: 'Breakfast', Lunch: 'Lunch', Dinner: 'Dinner',
+  Reception: 'Reception', Beverage: 'Beverages', Dessert: 'Desserts',
+};
+
+// Fixed display order (meal-flow), matching the skill's "assign in fixed order"
+// rule so subcategories don't shuffle between renders.
+const GROUP_ORDER = ['Breakfast', 'Lunch', 'Dinner', 'Reception', 'Dessert', 'Beverage'];
+
+// Groups by MealType (at most 6 groups) rather than the much finer ItemType
+// (28 distinct values) — a coarser, more scannable split for large menus.
+function groupItemsByMeal(items) {
+  const byMeal = new Map();
+  items.forEach((item) => {
+    const key = item.mealType || 'Other';
+    if (!byMeal.has(key)) byMeal.set(key, []);
+    byMeal.get(key).push(item);
+  });
+  const ordered = [];
+  GROUP_ORDER.forEach((key) => {
+    if (byMeal.has(key)) {
+      ordered.push({ type: key, label: GROUP_LABELS[key] || key, items: byMeal.get(key) });
+      byMeal.delete(key);
+    }
+  });
+  Array.from(byMeal.keys()).sort().forEach((key) => {
+    ordered.push({ type: key, label: GROUP_LABELS[key] || key, items: byMeal.get(key) });
+  });
+  return ordered;
+}
+
 /* ---------- CSV parsing ---------- */
 // RFC4180-ish, but matches Excel/Python csv's lenient rule: a `"` only starts a
 // quoted field if it's the first character of that field, otherwise it's literal
@@ -395,10 +430,18 @@ function ItemCard({ item, qty, setQty, headcount, business }) {
       </div>
       <div className="cc-item-actions">
         {item.priceTBD ? (
-          <a className="cc-quote-link"
-            href={`mailto:${business.contactEmail || ''}?subject=${encodeURIComponent('Quote request: ' + item.itemName)}`}>
-            Request quote
-          </a>
+          business.contactEmail ? (
+            <a className="cc-quote-link"
+              href={`mailto:${business.contactEmail}?subject=${encodeURIComponent('Quote request: ' + item.itemName)}`}>
+              Request quote
+            </a>
+          ) : business.contactPhone ? (
+            <a className="cc-quote-link" href={`tel:${business.contactPhone.replace(/[^0-9+]/g, '')}`}>
+              Call for quote
+            </a>
+          ) : (
+            <span className="cc-quote-tbd">Contact business for quote</span>
+          )
         ) : inCart ? (
           <div className="cc-qty-stepper">
             <button className="cc-qty-btn" onClick={handleDec} aria-label="Decrease quantity">−</button>
@@ -414,13 +457,39 @@ function ItemCard({ item, qty, setQty, headcount, business }) {
   );
 }
 
+function ItemGroup({ group, defaultOpen, cart, setQty, headcount, business }) {
+  const [open, setOpen] = useState(defaultOpen);
+  return (
+    <div className="cc-item-group">
+      <button type="button" className="cc-item-group-header" onClick={() => setOpen((o) => !o)} aria-expanded={open}>
+        <span>{group.label}</span>
+        <span className="cc-item-group-count">{group.items.length}</span>
+        <svg className={'cc-chevron' + (open ? ' cc-chevron-open' : '')} xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </button>
+      {open && (
+        <div className="cc-item-grid">
+          {group.items.map((item) => (
+            <ItemCard key={item.id} item={item} qty={cart[item.id] || 0}
+              setQty={(q) => setQty(item.id, q)} headcount={headcount} business={business} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function BusinessSection({ business, items, search, mealFilter, dietary, deliveryPref, cart, setQty, headcount, budgetNum }) {
+  const [showAnyway, setShowAnyway] = useState(false);
   const filteredItems = items.filter((i) => passesSearch(i, search) && passesMeal(i, mealFilter) && passesDietary(i, dietary));
 
   const headcountOk = businessMeetsHeadcountMin(business, headcount);
   const deliveryOk = businessMeetsDeliveryPref(business, deliveryPref);
   const belowBudgetMin = budgetBelowMinimum(business, budgetNum);
   const hasNoItems = items.length === 0;
+  const hideItems = belowBudgetMin && !showAnyway;
 
   return (
     <div className={'cc-business' + (!headcountOk || !deliveryOk ? ' cc-business-disabled' : '')} style={{ '--biz-color': business.color }}>
@@ -455,21 +524,34 @@ function BusinessSection({ business, items, search, mealFilter, dietary, deliver
       {belowBudgetMin && (
         <div className="cc-business-unavailable">
           Your budget ({fmtMoney(budgetNum)}) is below this caterer's {fmtMoney(business.minimumOrderAmount)} order minimum.
+          {' '}
+          <button type="button" className="cc-show-anyway-btn" onClick={() => setShowAnyway((v) => !v)}>
+            {showAnyway ? 'Hide menu items' : `Show ${items.length} menu item${items.length === 1 ? '' : 's'} anyway`}
+          </button>
         </div>
       )}
-      {hasNoItems && (
+      {!hideItems && hasNoItems && (
         <div className="cc-no-items">No published menu items on file for this business — contact them directly for their current menu and a quote.</div>
       )}
-      {!hasNoItems && filteredItems.length === 0 && (
+      {!hideItems && !hasNoItems && filteredItems.length === 0 && (
         <div className="cc-no-items">No items match your current filters.</div>
       )}
-      {!hasNoItems && filteredItems.length > 0 && (
-        <div className="cc-item-grid">
-          {filteredItems.map((item) => (
-            <ItemCard key={item.id} item={item} qty={cart[item.id] || 0}
-              setQty={(q) => setQty(item.id, q)} headcount={headcount} business={business} />
-          ))}
-        </div>
+      {!hideItems && !hasNoItems && filteredItems.length > 0 && (
+        filteredItems.length > GROUP_THRESHOLD ? (
+          <div className="cc-item-groups">
+            {groupItemsByMeal(filteredItems).map((g, i, all) => (
+              <ItemGroup key={g.type} group={g} defaultOpen={all.length === 1}
+                cart={cart} setQty={setQty} headcount={headcount} business={business} />
+            ))}
+          </div>
+        ) : (
+          <div className="cc-item-grid">
+            {filteredItems.map((item) => (
+              <ItemCard key={item.id} item={item} qty={cart[item.id] || 0}
+                setQty={(q) => setQty(item.id, q)} headcount={headcount} business={business} />
+            ))}
+          </div>
+        )
       )}
     </div>
   );

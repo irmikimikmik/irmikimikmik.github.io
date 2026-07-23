@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BC Indigenous Business Listings — Visualized</title>
+  <meta name="description" content="An interactive map and dashboard of Indigenous-owned businesses across British Columbia, built on the Government of BC's open Indigenous Business Listings dataset.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="subpage bb-body">
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">irmak.</a>
+      <ul class="nav-links">
+        <li><a href="../indigenous-initiatives.html">&larr; Indigenous Initiatives</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="bb-root">
+    <noscript>This tool needs JavaScript enabled to run.</noscript>
+    <div class="bb-loading">Loading businesses&hellip;</div>
+  </main>
+
+  <footer>
+    <p>Business listings visualized from the <a href="https://catalogue.data.gov.bc.ca/dataset/bc-indigenous-business-listings" target="_blank" rel="noopener noreferrer">Government of British Columbia Open Data Catalogue — BC Indigenous Business Listings</a> dataset, released under the <a href="https://www2.gov.bc.ca/gov/content/data/policy-standards/open-data/open-government-licence-bc" target="_blank" rel="noopener noreferrer">Open Government Licence &ndash; British Columbia</a>. Data is fetched live from the Province's published CSV and may not reflect the most current information — contact businesses directly to confirm details.</p>
+  </footer>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script type="text/babel" data-presets="react" src="app.js"></script>
+</body>
+</html>

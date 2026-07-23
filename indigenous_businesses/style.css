@@ -1,0 +1,349 @@
+/* ===== BC Indigenous Business Listings — Visualized ===== */
+
+.bb-body main { max-width: 1180px; }
+
+.bb-loading {
+  padding: 6rem 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+/* ---- Intro ---- */
+.bb-intro { padding-bottom: 1.5rem; }
+
+.bb-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.bb-title {
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+  color: var(--text);
+}
+
+.bb-subtitle {
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  max-width: 680px;
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
+}
+
+.bb-disclaimer {
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  margin-top: 0.75rem;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.bb-disclaimer a { color: var(--text-muted); }
+.bb-disclaimer a:hover { color: var(--accent); }
+
+/* ---- Stat tiles ---- */
+.bb-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.bb-stat-tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+}
+
+.bb-stat-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.4rem;
+}
+
+.bb-stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+/* ---- Filters ---- */
+.bb-filters {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem 1.25rem;
+}
+
+.bb-field { display: flex; flex-direction: column; gap: 0.4rem; }
+.bb-field-wide { grid-column: 1 / -1; }
+
+.bb-field label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.bb-field input[type="text"],
+.bb-field select {
+  font-family: var(--font);
+  font-size: 0.9rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.bb-field input:focus, .bb-field select:focus { border-color: var(--border-accent); }
+
+.bb-reset-btn {
+  align-self: flex-end;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.bb-reset-btn:hover { color: var(--text); border-color: var(--border-accent); }
+
+.bb-result-count {
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+/* ---- Charts ---- */
+.bb-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.bb-chart-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+}
+
+.bb-chart-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.bb-bar-row {
+  display: grid;
+  grid-template-columns: 132px 1fr 40px;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.55rem;
+  cursor: default;
+}
+
+.bb-bar-label {
+  font-size: 0.76rem;
+  color: var(--text-secondary, var(--text-muted));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bb-bar-track {
+  position: relative;
+  height: 20px;
+  background: var(--bg);
+  border-radius: 4px;
+  border-left: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.bb-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 0 4px 4px 0;
+  transition: background 0.15s, filter 0.15s;
+}
+
+.bb-bar-row:hover .bb-bar-fill { filter: brightness(1.15); }
+
+.bb-bar-value {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  text-align: right;
+}
+
+/* ---- Map ---- */
+.bb-map-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.bb-map-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.85rem;
+}
+
+.bb-map {
+  height: 460px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* Leaflet chrome, dark-mode tuned */
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.leaflet-popup-content { margin: 0.75rem 0.9rem; font-family: var(--font); }
+.leaflet-popup-content h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--text); }
+.leaflet-popup-content p { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.25rem; line-height: 1.5; }
+.leaflet-popup-content a { color: var(--accent); }
+
+.bb-cluster-icon {
+  border-radius: 50%;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 3px rgba(129,140,248,0.2);
+}
+
+/* ---- Results list ---- */
+.bb-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.bb-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.bb-card:hover { border-color: var(--border-accent); background: var(--surface-hover); }
+
+.bb-card-name { font-size: 0.9rem; font-weight: 600; color: var(--text); line-height: 1.3; }
+.bb-card-name a { color: inherit; text-decoration: none; }
+.bb-card-name a:hover { color: var(--accent); }
+
+.bb-card-meta {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+.bb-card-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bb-card-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+
+.bb-tag-mini {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  padding: 0.15rem 0.45rem;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+}
+
+.bb-card-links { display: flex; gap: 0.6rem; margin-top: auto; padding-top: 0.3rem; }
+
+.bb-card-links a {
+  font-size: 0.75rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.bb-card-links a:hover { text-decoration: underline; }
+
+.bb-load-more {
+  display: block;
+  margin: 0 auto 2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-glow);
+  border: 1px solid var(--border-accent);
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+}
+
+.bb-load-more:hover { background: rgba(129,140,248,0.22); }
+
+.bb-empty {
+  text-align: center;
+  color: var(--text-dim);
+  padding: 3rem 0;
+  font-size: 0.875rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 860px) {
+  .bb-charts { grid-template-columns: 1fr; }
+  .bb-bar-row { grid-template-columns: 100px 1fr 34px; }
+  .bb-map { height: 360px; }
+}
+
+@media (max-width: 560px) {
+  .bb-filters { grid-template-columns: 1fr 1fr; }
+  .bb-results-grid { grid-template-columns: 1fr; }
+}
