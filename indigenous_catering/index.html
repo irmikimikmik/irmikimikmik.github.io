@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indigenous Catering Budget Calculator — UBC</title>
+  <meta name="description" content="Find menu combinations from Indigenous-owned catering businesses that fit your budget and headcount, for UBC clubs and event organizers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="subpage catering-body">
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">irmak.</a>
+      <ul class="nav-links">
+        <li><a href="../indigenous-initiatives.html">&larr; Indigenous Initiatives</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="catering-root">
+    <noscript>This calculator needs JavaScript enabled to run.</noscript>
+    <div class="cc-loading">Loading calculator&hellip;</div>
+  </main>
+
+  <footer>
+    <p>Menu &amp; pricing data is read live from csv files I've created upon personal research, last updated July 2026. They may go stale — always confirm final pricing and availability directly with the caterer and their website before booking.</p>
+  </footer>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  <script type="text/babel" data-presets="react" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+Business,ItemName,ItemType,MealType,ServingSize,ServingSizeUnit,PricePerUnit,TotalPrice,MinimumOrderAmount,MinimumOrderType,DietaryNotes,Description,Notes
+Friendship Catering,Mushroom Bannock Pocket,Appetizer,Reception,1,piece,48,48,1,piece,Contains mushroom,Roasted mushrooms and herbed cream cheese wrapped and baked in puffed pastry; vegetarian; nut-free; priced per dozen
+Friendship Catering,Prairie Poppers,Appetizer,Reception,1,piece,42,42,1,piece,Contains elk,Braised elk shank and wild grain risotto croquettes fried until golden and served with lemon & roasted garlic aioli; dairy-free; nut-free; priced per dozen
+Friendship Catering,Hunter Roll,Appetizer,Reception,1,piece,48,48,1,piece,Contains venison,House-made venison chorizo sausage baked in puff pastry; nut-free; priced per dozen
+Friendship Catering,Duck Rillette,Appetizer,Reception,1,piece,42,42,1,piece,Contains duck,"Duck confit, blueberry jelly, candied hazelnuts, lemon garlic aioli served on toasted brioche; priced per dozen"
+Friendship Catering,Salmon Poke,Appetizer,Reception,1,piece,48,48,1,piece,Contains salmon,Maple & miso marinated Sockeye salmon with jalapeño pumpkin seed pesto and corn chips; priced per dozen
+Friendship Catering,Spirit of the Land,Sharing Board,Reception,20,person,20,20,1,person,Vegetarian,"Maple smoked carrot 'lox', grilled seasonal vegetables, wild mushroom spread, smoked jalapeño bean dip, house pickles; served with assorted bannock and crisps"
+Friendship Catering,Salish Sea,Sharing Board,Reception,25,person,25,25,1,person,Contains seafood,"Candied wild sockeye salmon, poached prawns, avocado & mango scallop ceviche, whipped salmon dip, house cocktail sauce; served with assorted bannock and crisps; nut-free"
+Friendship Catering,Hunter,Sharing Board,Reception,22,person,22,22,1,person,Contains game meat,"Two Rivers salami selection (elk, venison, bison), Le Petit Chapeau pâté selection, house-made pickles, mustard, seasonal jam; served with assorted bannock and crisps"
+Friendship Catering,Bison Bacon + Aged Cheddar Slider,Slider,Reception,1,piece,60,60,1,piece,Contains bison,"Rangeland bison patty, house-made bacon jam, aged cheddar, tomato relish, roasted garlic & lemon aioli on brioche bun; priced per dozen"
+Friendship Catering,Chickpea + Aged Cheddar Slider,Slider,Reception,1,piece,60,60,1,piece,Vegetarian,"Crispy chickpea patty, caramelized onion, aged cheddar, pickled red onion, roasted garlic & lemon aioli on brioche bun; vegan; nut-free; priced per dozen"
+Friendship Catering,Grilled Wild Sockeye Salmon,Main Course,Dinner,38,person,38,38,1,person,Contains salmon,Wild sockeye salmon served with lemon dill sauce; gluten-free; nut-free; served with local roasted beet & carrot plus choice of wild rice pilaf or garlic mashed potato
+Friendship Catering,Braised Bison,Main Course,Dinner,42,person,42,42,1,person,Contains bison,Slow-cooked rangeland bison shoulder with sage & blackberry jus; gluten-free; nut-free; dairy-free; served with local roasted beet & carrot plus choice of wild rice pilaf or garlic mashed potato
+Friendship Catering,Wild Mushroom Panisse,Main Course,Dinner,36,person,36,36,1,person,Vegetarian,Crispy wild mushroom & bean panisse served with pumpkin seed pesto; vegetarian; gluten-free; dairy-free; served with local roasted beet & carrot plus choice of wild rice pilaf or garlic mashed potato
+Friendship Catering,Elk Stew,Main Course,Dinner,42,person,42,42,1,person,Contains elk,"Tender elk leg simmered with potato, parsnip, carrots & fresh herbs served with freshly baked bannock; dairy-free; nut-free; served with local roasted beet & carrot"
+Friendship Catering,Three Sisters Salad,Salad,Dinner,5,person,5,5,1,person,Vegan,"Roasted squash, corn & bean medley on a bed of wild greens with honey & dill dressing; dairy-free; vegan; gluten-free"
+Friendship Catering,Field Greens,Salad,Dinner,5,person,5,5,1,person,Vegan,"Gourmet greens with fresh shaved root vegetables, dried fruit, savoury granola and lemon-thyme dressing; dairy-free; vegan"
+Friendship Catering,Indigi-Caesar,Salad,Dinner,7,person,7,7,1,person,Contains salmon,"Chopped romaine, baby kale, candied salmon bits, shaved parmesan, croutons and house Caesar dressing"
+Salmon n Bannock,Bulk Bannock with Butter,Bulk,Breakfast,12,pieces,43,43,12,pieces,Vegan,Per dozen,
+Salmon n Bannock,Bulk Bannock Gluten Free,Bulk,Breakfast,12,pieces,54,54,12,pieces,Gluten-free,Per dozen,
+Salmon n Bannock,Bannock Bowl,Breakfast,Breakfast,1,serving,25,25,1,piece,Contains salmon,"Salmon Mousse, Includes Bannock Crackers",
+Salmon n Bannock,Pemmican Mousse Bannock Bowl,Breakfast,Breakfast,1,serving,35,35,1,piece,Contains meat,"Pemmican Mousse, Includes Bannock Crackers",
+Salmon n Bannock,Seasonal Jam Bannock Bowl,Breakfast,Breakfast,1,serving,15,15,1,piece,Vegan,"Seasonal Jam, Includes Bannock Crackers",
+Salmon n Bannock,Hearty Braised Bison Stuff Bannock,Breakfast,Breakfast,1,serving,14,14,1,piece,Contains bison,$16 for gluten-free,
+Salmon n Bannock,Breakfast Bannockwiches,Breakfast,Breakfast,1,piece,12,12,1,piece,Contains eggs,"Lemon aioli, Egg, sliced tomato, Smoked Cheddar. Options: Elk Pattie +$9, Salmon Lox +$6, Game Salami +$5, Gluten free +$2",
+Salmon n Bannock,Yogurt Parfaits,AddOn,Breakfast,1,serving,4.75,4.75,1,piece,Vegetarian,"Sweetgrass Cherrie, Sage Blueberries",
+Salmon n Bannock,Fruit Salad,AddOn,Breakfast,1,serving,6.50,6.50,1,piece,Vegan,Seasonal,
+Salmon n Bannock,Cinnamon Bite,AddOn,Breakfast,48,pieces,57,57,48,pieces,Vegetarian,48 pieces,
+Salmon n Bannock,Coffee Box,Beverage,Breakfast,12,people,45,45,12,people,Vegan,Includes Cups and Condiments,
+Salmon n Bannock,Breakfast Charcuterie Platter,Platter,Breakfast,12,people,150,150,12,people,Contains meat and dairy,"Spinach, Cream cheese, smoked cheddar, Sliced Cinnamon apples, sage blueberries, 24 deviled eggs, Bannock Crackers",
+Salmon n Bannock,Game Salami Add,AddOn,Breakfast,1,serving,60,60,1,serving,Contains meat,+$60,
+Salmon n Bannock,Salmon Add,AddOn,Breakfast,1,serving,72,72,1,serving,Contains salmon,"Candied Salmon, Salmon Lox, +$72",
+Salmon n Bannock,Sea and Land Combination,Platter,Breakfast,1,serving,120,120,1,serving,Contains seafood and meat,+$120,
+Salmon n Bannock,Bannockwiches,Lunch,Lunch,1,piece,28,28,1,piece,Varies,"Includes Coleslaw. Choice of: Roasted Pepper (vg), Herb cream Cheese and Cucumber (Vg), Salmon Lox, Game Salami, Smoked Salmon Salad",
+Salmon n Bannock,Lunches - The Feast,Lunch,Lunch,1,person,39,39,12,people,Contains salmon and meat,"House smoked Salmon, Elk meatballs Smoked Medicine Wheel Vegetable Skewers Roasted Potato & Green Salad. Includes Bannock. Substitute: Sage Infused Blueberries Salmon - + 4 per order.",
+Salmon n Bannock,Stuff Peppers AddOn,AddOn,Lunch,1,serving,0,0,1,serving,Vegetarian,"Wild rice, and vegetarian chili. Add Cheese $3 Vegan Cheese $5",
+Salmon n Bannock,Game Sausages,AddOn,Lunch,1,serving,12,12,1,serving,Contains meat,,
+Salmon n Bannock,Build Your Own Bannock Taco Bar - Ground Elk,TacoBar,Lunch,1,person,28,28,12,people,Contains meat,"Comes with chopped greens, diced tomatoes, cheddar cheese, and sour cream.",
+Salmon n Bannock,Build Your Own Bannock Taco Bar - Vegetarian Chili,TacoBar,Lunch,1,person,20,20,12,people,Vegetarian,"Comes with chopped greens, diced tomatoes, cheddar cheese, and sour cream.",
+Salmon n Bannock,Canape Service - Sea Selections,Canape,Reception,12,pieces,43,43,48,pieces,Varies,"Minimum 4 dozen. Candied Salmon and Sweetgrass Cherry Skewers, Lemon Dill Salmon Skewers, Lox, Cream Cheese, Caper cracker (gf available +2) + $1 per dozen, Salmon Ceviche in Cucumber cups",
+Salmon n Bannock,Canape Service - Land Selections,Canape,Reception,12,pieces,43,43,48,pieces,Varies,"Minimum 4 dozen. Game Salami Skewers, Pulled Bison Crackers (gf available +2), Blueberry Sage BBQ Elk Meatballs",
+Salmon n Bannock,Canape Service - Gathered and Sweet Selections,Canape,Reception,12,pieces,33,33,12,pieces,Vegan,"Three Sisters Salad–beans, corn, and squash (Vegan)",
+Salmon n Bannock,Rice Pudding Canapé,Canape,Reception,12,pieces,43,43,12,pieces,Vegetarian,,
+Salmon n Bannock,Oatmeal Cookies Canapé,Canape,Reception,12,pieces,38,38,12,pieces,Vegetarian,,
+Salmon n Bannock,Sea and Land Platter,Platter,Reception,12,people,350,350,12,people,Contains seafood and meat,,
+Salmon n Bannock,Bubbly,Beverage,Beverage,1,serving,3.50,3.50,1,serving,Vegan,,
+Salmon n Bannock,Karma,Beverage,Beverage,1,serving,4.75,4.75,1,serving,Vegan,,
+Salmon n Bannock,Cookie,Dessert,Dessert,1,piece,5.00,5.00,1,piece,Vegetarian,,
+Salmon n Bannock,Rice Pudding,Dessert,Dessert,1,serving,7.00,7.00,1,serving,Vegetarian,,
+Cedar Feast House,Venison Meatballs w/Blueberry Compote,Canape,Reception,1,piece,TBD,TBD,TBD,TBD,Contains venison,,
+Cedar Feast House,Rhubarb BBQ Pulled Bison Mini Sliders,Canape,Reception,1,piece,TBD,TBD,TBD,TBD,Contains bison,,
+Cedar Feast House,Smoked Salmon Mousse on Bannock Crackers,Canape,Reception,1,piece,TBD,TBD,TBD,TBD,Contains salmon,,
+Cedar Feast House,Beetroot Patties w/Crème Fraiche,Canape,Reception,1,piece,TBD,TBD,TBD,TBD,Vegetarian,,
+Cedar Feast House,Butternut Squash Gnocchi w/Sage Butter,Canape,Reception,1,piece,TBD,TBD,TBD,TBD,Vegetarian,,
+Cedar Feast House,Mushroom Duxelle Cream Cheese Pastry,Canape,Reception,1,piece,TBD,TBD,TBD,TBD,Vegetarian,,
+Cedar Feast House,Organic Mixed Green,Salad,Lunch,1,serving,TBD,TBD,TBD,TBD,Vegan,,
+Cedar Feast House,Three Sister Salad,Salad,Lunch,1,serving,TBD,TBD,TBD,TBD,Vegan,,
+Cedar Feast House,Wild Rice Cranberry,Salad,Lunch,1,serving,TBD,TBD,TBD,TBD,Vegan,,
+Cedar Feast House,Pumpkin Crusted Halibut,Main,Lunch,1,person,TBD,TBD,TBD,TBD,Contains fish,,
+Cedar Feast House,Mediterranean Style Halibut,Main,Lunch,1,person,TBD,TBD,TBD,TBD,Contains fish,,
+Cedar Feast House,Maple Glazed Salmon,Main,Lunch,1,person,TBD,TBD,TBD,TBD,Contains salmon,,
+Cedar Feast House,Bison Flank Steak w/Blueberry Au Jus,Main,Lunch,1,person,TBD,TBD,TBD,TBD,Contains bison,,
+Cedar Feast House,Venison Meatloaf,Main,Lunch,1,person,TBD,TBD,TBD,TBD,Contains venison,,
+Cedar Feast House,Bison Meatloaf,Main,Lunch,1,person,TBD,TBD,TBD,TBD,Contains bison,,
+Cedar Feast House,Venison Shepards Pie,Main,Lunch,1,person,TBD,TBD,TBD,TBD,Contains venison,,
+Cedar Feast House,Bannock Tacos,Main,Lunch,1,person,TBD,TBD,TBD,TBD,Varies,,
+Cedar Feast House,Bison Burgers,Main,Lunch,1,person,TBD,TBD,TBD,TBD,Contains bison,,
+Cedar Feast House,Chicken Coq Au Vin,Main,Lunch,1,person,TBD,TBD,TBD,TBD,Contains chicken,,
+Cedar Feast House,Bison Bourguignon,Main,Lunch,1,person,TBD,TBD,TBD,TBD,Contains bison,,
+Cedar Feast House,Wild Rice Pilaf,Side,Lunch,1,serving,TBD,TBD,TBD,TBD,Vegan,,
+Cedar Feast House,Mashed Potato,Side,Lunch,1,serving,TBD,TBD,TBD,TBD,Contains dairy,,
+Cedar Feast House,Seasonal Vegetable,Side,Lunch,1,serving,TBD,TBD,TBD,TBD,Vegan,,
+Cedar Feast House,Venison Lasagna,Pasta,Lunch,1,person,TBD,TBD,TBD,TBD,Contains venison,,
+Cedar Feast House,Beef Lasagna,Pasta,Lunch,1,person,TBD,TBD,TBD,TBD,Contains beef,,
+Cedar Feast House,Vegetarian Lasagna,Pasta,Lunch,1,person,TBD,TBD,TBD,TBD,Vegetarian,,
+Cedar Feast House,Chicken Fettucine,Pasta,Lunch,1,person,TBD,TBD,TBD,TBD,Contains chicken,,
+Cedar Feast House,Beef Stew,Soup,Lunch,1,person,TBD,TBD,TBD,TBD,Contains beef,,
+Cedar Feast House,Bison Stew,Soup,Lunch,1,person,TBD,TBD,TBD,TBD,Contains bison,,
+Cedar Feast House,Venison Chili,Soup,Lunch,1,person,TBD,TBD,TBD,TBD,Contains venison,,
+Cedar Feast House,Bannock Berry Bread Pudding,Dessert,Dessert,1,serving,TBD,TBD,TBD,TBD,Contains dairy,,
+Cedar Feast House,Blueberry Lemon Cake,Dessert,Dessert,1,serving,TBD,TBD,TBD,TBD,Contains dairy,,
+Cedar Feast House,Fresh Fruit Tray,Dessert,Dessert,15,people,TBD,TBD,TBD,TBD,Vegan,,
+Salishan Catering,Bannock (large),BakedGood,Breakfast,1,piece,2.95,2.95,10,people,,,
+Salishan Catering,Bannock (mini),BakedGood,Breakfast,1,person,4.0,4.0,10,people,,2 mini bannocks per person,
+Salishan Catering,Assorted Breakfast Pastries & Fresh Fruit Platter,Breakfast,Breakfast,1,person,14.95,14.95,10,people,,,
+Salishan Catering,Assorted Breakfast Pastries & Fruit Kebob with Yogurt Dip,Breakfast,Breakfast,1,person,14.95,14.95,10,people,,,
+Salishan Catering,Assorted Muffins and Scones with Butter and Jam,BakedGood,Breakfast,1,person,4.95,4.95,10,people,,,Gluten-free option available (+$1.00)
+Salishan Catering,Assorted Tea Bread and Coffee Cakes with Butter and Jam,BakedGood,Breakfast,1,person,4.95,4.95,10,people,,,Gluten-free option available (+$1.00)
+Salishan Catering,Cinnamon or Plain Bannock with Butter and Jam,BakedGood,Breakfast,1,person,2.95,2.95,10,people,,,
+Salishan Catering,Bagels and Cream Cheese,BakedGood,Breakfast,1,person,4.95,4.95,10,people,,,Gluten-free option available (+$1.00)
+Salishan Catering,Fruit Kebabs with Dip (mini),Healthy,Breakfast,1,piece,3.5,3.5,10,people,Vegan,,
+Salishan Catering,Fruit Kebabs with Dip (large),Healthy,Breakfast,1,piece,5.0,5.0,10,people,Vegan,,
+Salishan Catering,Fruit Salad,Healthy,Breakfast,1,person,6.95,6.95,10,people,Vegan,,
+Salishan Catering,Seasonal Fruit Platter (Medium),Platter,Breakfast,1,platter,100.0,100.0,10,people,Vegan,Serves 15-20 guests,
+Salishan Catering,Seasonal Fruit Platter (Large),Platter,Breakfast,1,platter,150.0,150.0,10,people,Vegan,Serves 20-30 guests,
+Salishan Catering,Individual Yogurt Parfaits,Healthy,Breakfast,1,person,7.95,7.95,10,people,Vegetarian,"Yogurt, granola, fresh fruit and honey",
+Salishan Catering,Individual Yogurts,Healthy,Breakfast,1,person,2.95,2.95,10,people,Vegetarian,,Gluten-free option available (+$1.00)
+Salishan Catering,House-made Granola Bars,Healthy,Breakfast,1,person,3.95,3.95,10,people,Vegetarian,,Gluten-free option available (+$1.00)
+Salishan Catering,Classic Breakfast,Breakfast,Breakfast,1,person,16.95,16.95,10,people,,"Scrambled eggs, bacon, sausage (pork or turkey), hash browns, toast with butter and preserves",
+Salishan Catering,Quiche - Roasted Vegetable with Feta,Breakfast,Breakfast,1,platter,55.0,55.0,10,people,Vegetarian,Serves 6-8,
+Salishan Catering,Quiche - Classic Lorraine,Breakfast,Breakfast,1,platter,55.0,55.0,10,people,,Serves 6-8,
+Salishan Catering,Quiche - In-house Smoked Salmon,Breakfast,Breakfast,1,platter,55.0,55.0,10,people,Contains salmon,Serves 6-8,
+Salishan Catering,"Frittata - Smoked Salmon, Fiddlehead and Seaweed Flakes",Breakfast,Breakfast,1,platter,55.0,55.0,10,people,Contains salmon,Serves 6-8,
+Salishan Catering,"Frittata - Roasted Corn, Wild Mushroom, Goat Cheese",Breakfast,Breakfast,1,platter,55.0,55.0,10,people,Vegetarian,Serves 6-8,
+Salishan Catering,"Frittata - Tomato, Zucchini, Fresh Herbs and Almond Milk",Breakfast,Breakfast,1,platter,50.0,50.0,10,people,Vegan,Serves 6-8,
+Salishan Catering,Mini Quiche and Frittatas,Breakfast,Breakfast,1,piece,3.5,3.5,12,pieces,,"Bite-sized version of the quiche/frittata selection, served at room temperature. Minimum 1 dozen.",Source menu lists this at two different prices ($3.50 and $3.95 per piece) — confirm current price with caterer.
+Salishan Catering,Roasted Vegetables and Hash,Casserole,Breakfast,8,people,55.0,55.0,,,Vegetarian,,Gluten-free option available
+Salishan Catering,Naha Hash,Casserole,Breakfast,8,people,55.0,55.0,,,,"Pepper, onion and potato hash topped with poached eggs",Gluten-free option available
+Salishan Catering,Bannock McMuffin,Sandwich,Breakfast,1,person,10.95,10.95,10,people,,"Eggs, bacon and cheddar cheese on bannock",
+Salishan Catering,Veggie McMuffin,Sandwich,Breakfast,1,person,10.95,10.95,10,people,Vegetarian,"Eggs, grilled tomato, cheddar on bannock",
+Salishan Catering,"Breakfast Wrap - Smoked Salmon, Red Onion, Arugula, Cream Cheese",Wrap,Breakfast,1,person,12.95,12.95,10,people,Contains salmon,,Gluten-free wrap available (+$2.00)
+Salishan Catering,"Breakfast Wrap - Scrambled Egg, Potato, Black Bean Salsa, Cheddar",Wrap,Breakfast,1,person,12.95,12.95,10,people,Vegetarian,,Gluten-free wrap available (+$2.00)
+Salishan Catering,"Breakfast Wrap - Roasted Peppers, Mushrooms, Spinach, Swiss Cheese",Wrap,Breakfast,1,person,12.95,12.95,10,people,Vegetarian,,Gluten-free wrap available (+$2.00)
+Salishan Catering,Bacon,Side,Breakfast,1,person,4.0,4.0,,,,3 pieces per person,
+Salishan Catering,Sausage (Pork or Turkey),Side,Breakfast,1,person,4.0,4.0,,,,2 pieces per person,
+Salishan Catering,Hash Browns,Side,Breakfast,1,person,2.5,2.5,,,Vegan,,
+Salishan Catering,Oatmeal with Brown Sugar and Milk,Side,Breakfast,1,person,2.5,2.5,,,Vegetarian,,
+Salishan Catering,Pancakes with Maple Syrup,Side,Breakfast,1,person,4.0,4.0,,,Vegetarian,2 pancakes per person,
+Salishan Catering,Boiled Eggs,Side,Breakfast,1,piece,2.0,2.0,,,Vegetarian,,
+Salishan Catering,Musqueam Breakfast Platter,Platter,Breakfast,1,platter,95.0,95.0,10,people,,"Hard boiled eggs, assorted cheese slices, whole fruit and grilled bannock",
+Salishan Catering,The Mighty Fraser Platter,Platter,Breakfast,1,platter,120.0,120.0,10,people,Contains salmon,"Maple-glazed smoked salmon, salmon pate, blueberry blinis with wild rose jam and seaweed dusted bannock",
+Salishan Catering,Freshly Brewed Coffee,Beverage,Beverage,1,pot,25.0,25.0,,,Vegan,"Push pot, serves 10-12 people; cream, sugar and milk included",
+Salishan Catering,Assorted Teas,Beverage,Beverage,1,pot,25.0,25.0,,,Vegan,"Push pot, serves 10-12 people; cream, sugar and milk included",
+Salishan Catering,Sparkling Water,Beverage,Beverage,1,person,2.95,2.95,,,Vegan,,
+Salishan Catering,Soapberry Punch,Beverage,Beverage,1,person,3.95,3.95,,,Vegan,,
+Salishan Catering,Assorted Juices and Soft Drinks,Beverage,Beverage,1,person,2.95,2.95,,,Vegan,,
+Salishan Catering,Soup or Salad and Sandwich Combo,Lunch,Lunch,1,person,19.95,19.95,10,people,,Served with deli meats. All meals include a piece of bannock bread.,Disposable-ware fee $2.00 per meal.
+Salishan Catering,Entree Salad - Grilled Salmon,Salad,Lunch,1,person,23.95,23.95,10,people,Contains salmon,"Mixed greens, fiddleheads, roasted cherry tomatoes, house dressing",
+Salishan Catering,Entree Salad - Candied Salmon,Salad,Lunch,1,person,20.95,20.95,10,people,Contains salmon,"Arugula, goat cheese, cucumber, apples, dried cranberries, lemon, olive oil",
+Salishan Catering,Entree Salad - Grilled Chicken Caesar,Salad,Lunch,1,person,20.95,20.95,10,people,,With parmesan shavings,
+Salishan Catering,Entree Salad - Grilled Beef,Salad,Lunch,1,person,20.95,20.95,10,people,,"Arugula, caramelized red onion, shaved fennel, peppers, house dressing",
+Salishan Catering,Entree Salad - Roasted Vegetable and Quinoa,Salad,Lunch,1,person,19.95,19.95,10,people,Vegan,"Kale, toasted pumpkin seeds, balsamic olive oil",
+Salishan Catering,Side Salad - Salishan Mixed Greens,SideSalad,Lunch,1,person,6.95,6.95,10,people,,"Assorted vegetables, stinging nettle dressing",
+Salishan Catering,Side Salad - Caesar,SideSalad,Lunch,1,person,6.95,6.95,10,people,,"Romaine, herbed croutons, shaved parmesan",
+Salishan Catering,Side Salad - West Coast Potato Salad,SideSalad,Lunch,1,person,6.95,6.95,10,people,,"Baby new potatoes, sea asparagus, caramelized onion, peppers, seaweed vinaigrette caper's dressing",
+Salishan Catering,Side Salad - Beet Salad,SideSalad,Lunch,1,person,6.95,6.95,10,people,,"Apples, goat cheese, dandelion, red onion, parsley, pumpkin seeds",
+Salishan Catering,Side Salad - Greek Salad,SideSalad,Lunch,1,person,6.95,6.95,10,people,,"Cucumber, peppers, tomato, feta, kalamata olives",
+Salishan Catering,Side Salad - Quinoa Salad,SideSalad,Lunch,1,person,6.95,6.95,10,people,,"Roasted yams, parsnips, cranberry, fresh herbs, feta",
+Salishan Catering,Side Salad - Pasta Salad,SideSalad,Lunch,1,person,6.95,6.95,10,people,,"Basil, tomatoes, peppers, onion, carrots, stinging nettle and basil pesto",
+Salishan Catering,Side Salad - Classic Potato Salad,SideSalad,Lunch,1,person,6.95,6.95,10,people,,"With hard-boiled eggs, pickles and green onions",
+Salishan Catering,Seafood Chowder,Soup,Lunch,1,person,12.95,12.95,10,people,Contains seafood,Served with a side of bannock or a baguette,
+Salishan Catering,Wind-dried Salmon and Roasted Corn Chowder,Soup,Lunch,1,person,12.95,12.95,10,people,Contains salmon,Served with a side of bannock or a baguette,
+Salishan Catering,Bacon and Clam Chowder,Soup,Lunch,1,person,12.95,12.95,10,people,,Served with a side of bannock or a baguette,
+Salishan Catering,Three Sister Soup,Soup,Lunch,1,person,9.95,9.95,10,people,Vegan,,
+Salishan Catering,Spiced Squash Soup,Soup,Lunch,1,person,9.95,9.95,10,people,Vegan,,
+Salishan Catering,Creamy Tomato Seaweed Soup,Soup,Lunch,1,person,9.95,9.95,10,people,Vegetarian,,
+Salishan Catering,Squamish Wild Mushroom Soup,Soup,Lunch,1,person,9.95,9.95,10,people,Vegetarian,,
+Salishan Catering,Chicken or Vegetable Noodle Soup,Soup,Lunch,1,person,9.95,9.95,10,people,,,
+Salishan Catering,Sandwich - Salmon Salad,Sandwich,Lunch,1,person,12.95,12.95,10,people,Contains salmon,"Cucumbers, leaf lettuce, dill, lemon",Gluten-free bread available (+$1.50)
+Salishan Catering,Sandwich - House Smoked Salmon,Sandwich,Lunch,1,person,12.95,12.95,10,people,Contains salmon,"Cream cheese, red onion, capers",Gluten-free bread available (+$1.50)
+Salishan Catering,"Sandwich - Turkey, Brie",Sandwich,Lunch,1,person,12.95,12.95,10,people,,Cranberry chutney,Gluten-free bread available (+$1.50)
+Salishan Catering,Sandwich - Egg Salad,Sandwich,Lunch,1,person,12.95,12.95,10,people,Vegetarian,"Arugula, celery, cucumber, green onion",Gluten-free bread available (+$1.50)
+Salishan Catering,"Sandwich - Tomato, Bocconcini",Sandwich,Lunch,1,person,12.95,12.95,10,people,Vegetarian,"Cucumber, arugula, balsamic glaze, fresh basil oil",Gluten-free bread available (+$1.50)
+Salishan Catering,Sandwich - Grilled Vegetable,Sandwich,Lunch,1,person,12.95,12.95,10,people,Vegan,"Lettuce, tomato, cucumber, smoked paprika hummus",Gluten-free bread available (+$1.50)
+Salishan Catering,Sandwich - Horseradish and Rosemary Crusted Roast Beef,Sandwich,Lunch,1,person,12.95,12.95,10,people,,,Gluten-free bread available (+$1.50)
+Salishan Catering,"Sandwich - Ham, Smoked Cheddar",Sandwich,Lunch,1,person,12.95,12.95,10,people,,"Arugula, mustard",Gluten-free bread available (+$1.50)
+Salishan Catering,"Sandwich - Grilled Chicken, Basil Mayo",Sandwich,Lunch,1,person,12.95,12.95,10,people,,Roasted peppers,Gluten-free bread available (+$1.50)
+Salishan Catering,Bagged Lunch,BoxedLunch,Lunch,1,person,19.95,19.95,,,,"Deli meat sandwich, whole fruit and bottled water",
+Salishan Catering,Boxed Lunch - Alder Grilled Salmon,BoxedLunch,Lunch,1,person,24.95,24.95,10,people,Contains salmon,"Tomato jam, bannock, salad",Disposables not included; extra fee $2.00 per serving.
+Salishan Catering,Boxed Lunch - New York Strip Loin,BoxedLunch,Lunch,1,person,22.95,22.95,10,people,,"Red onion marmalade, coleslaw, bannock",Disposables not included; extra fee $2.00 per serving.
+Salishan Catering,Boxed Lunch - Stinging Nettle Pesto Marinated Chicken,BoxedLunch,Lunch,1,person,20.95,20.95,10,people,,"Herb aioli, bannock, salad",Disposables not included; extra fee $2.00 per serving.
+Salishan Catering,Boxed Lunch - Grilled Vegetable Kebobs,BoxedLunch,Lunch,1,person,19.95,19.95,10,people,Vegan,"Quinoa and cucumber salad, hummus, bannock",Disposables not included; extra fee $2.00 per serving.
+Salishan Catering,Hot Lunch - Wild West Coast Grilled Salmon,HotLunch,Lunch,1,person,27.0,27.0,10,people,Contains salmon,"With roasted tomato jam. Comes with herbed rice pilaf, choice of side salad and bannock.",
+Salishan Catering,Hot Lunch - Chinook Salmon Cakes,HotLunch,Lunch,1,person,27.0,27.0,10,people,Contains salmon,"With seaweed tartar sauce. Comes with herbed rice pilaf, choice of side salad and bannock.",
+Salishan Catering,Hot Lunch - In-house Alder Smoked Salmon,HotLunch,Lunch,1,person,27.0,27.0,10,people,Contains salmon,"With smoked tomato jam. Comes with herbed rice pilaf, choice of side salad and bannock.",
+Salishan Catering,Hot Lunch - Slow Roasted Spice-rubbed Beef Brisket,HotLunch,Lunch,1,person,25.0,25.0,10,people,,Au jus and rosemary garlic potatoes. Comes with bannock and choice of side salad.,Requires two days notice.
+Salishan Catering,Hot Lunch - Shepherds Pie,HotLunch,Lunch,1,person,25.0,25.0,10,people,,Topped with whipped sweet potatoes and parsnips. Comes with bannock and choice of side salad.,
+Salishan Catering,Hot Lunch - Hearty Venison Stew,HotLunch,Lunch,1,person,25.0,25.0,10,people,Contains venison,With rice pilaf. Comes with bannock and choice of side salad.,
+Salishan Catering,Hot Lunch - Venison Meatloaf,HotLunch,Lunch,1,person,25.0,25.0,10,people,Contains venison,"Caramelized onion, tomato sauce and garlic mashed potatoes. Comes with bannock and choice of side salad.",
+Salishan Catering,Hot Lunch - Kelp Marinated Grilled Chicken Breast,HotLunch,Lunch,1,person,25.0,25.0,10,people,,With roasted vegetable quinoa. Served with choice of salad and bannock.,
+Salishan Catering,Hot Lunch - Chicken Cacciatore,HotLunch,Lunch,1,person,25.0,25.0,10,people,,On pasta. Served with choice of salad and bannock.,
+Salishan Catering,Hot Lunch - Chicken Potpie,HotLunch,Lunch,1,person,25.0,25.0,10,people,,With lemon roasted potatoes. Served with choice of salad and bannock.,
+Salishan Catering,Hot Lunch - Curry Chicken,HotLunch,Lunch,1,person,25.0,25.0,10,people,,With coconut basmati rice. Served with choice of salad and bannock.,
+Salishan Catering,Hot Lunch - Slow Roasted Chicken Thigh,HotLunch,Lunch,1,person,25.0,25.0,10,people,,"Hunter sauce, on a creamy bacon and wild herb potato risotto. Served with choice of salad and bannock.",
+Salishan Catering,Vegetarian Indian Tacos,TacoBar,Lunch,1,person,15.95,15.95,10,people,Vegetarian,"4 bean chilli with vegetables. Comes with bannock, sour cream, salsa, shredded lettuce, tomato and grated cheddar.",
+Salishan Catering,Indian Tacos,TacoBar,Lunch,1,person,17.95,17.95,10,people,,"Hearty beef chilli with bannock, sour cream, salsa, shredded lettuce, tomato and grated cheddar.",
+Salishan Catering,Crispy Fish Tacos,TacoBar,Lunch,1,person,21.95,21.95,10,people,,"Lime crema, shaved cabbage slaw, salsa and bannock.",
+Salishan Catering,Pasta - Spaghetti with Meat Sauce,Pasta,Lunch,1,person,20.95,20.95,10,people,,Served with choice of salad and bannock or garlic bread.,"Add chicken +$3.00, add prawns +$4.00."
+Salishan Catering,Pasta - Classic Mac and Cheese,Pasta,Lunch,1,person,20.95,20.95,10,people,Vegetarian,Served with choice of salad and bannock or garlic bread.,"Add chicken +$3.00, add prawns +$4.00."
+Salishan Catering,Pasta - Penne with Basil Pesto,Pasta,Lunch,1,person,20.95,20.95,10,people,Vegetarian,Roasted vegetables and tomatoes. Served with choice of salad and bannock or garlic bread.,"Add chicken +$3.00, add prawns +$4.00."
+Salishan Catering,Pasta - Wild Mushroom Alfredo,Pasta,Lunch,1,person,20.95,20.95,10,people,Vegetarian,Served with choice of salad and bannock or garlic bread.,"Add chicken +$3.00, add prawns +$4.00."
+Salishan Catering,Vegetarian Curry,HotLunch,Lunch,1,person,20.95,20.95,10,people,Vegan,Coconut rice with house-made mango chutney. Served with choice of salad and bannock.,
+Salishan Catering,Three Sisters Hearty Stew,HotLunch,Lunch,1,person,20.95,20.95,10,people,Vegan,Served with choice of salad and bannock.,
+Salishan Catering,Vegetable Kebobs,HotLunch,Lunch,1,person,20.95,20.95,10,people,Vegan,Roasted lemon potatoes with stinging nettle green goddess. Served with choice of salad and bannock.,
+Salishan Catering,Vegetarian Enchilada,HotLunch,Lunch,1,person,20.95,20.95,10,people,Vegetarian,"Salsa, sour cream and cheese. Served with choice of salad and bannock.",
+Salishan Catering,Mediterranean Ratatouille Stew,HotLunch,Lunch,1,person,20.95,20.95,10,people,Vegan,With quinoa. Served with choice of salad and bannock.,
+Salishan Catering,Assorted Jumbo Cookies,Dessert,Dessert,1,person,4.0,4.0,,,Vegetarian,2 per person,
+Salishan Catering,Assorted Tarts and Squares,Dessert,Dessert,1,person,5.0,5.0,,,Vegetarian,2 per person,
+Salishan Catering,"Variety of Cookies, Tarts and Squares",Dessert,Dessert,1,person,5.0,5.0,,,Vegetarian,2 per person,
+Salishan Catering,"Gluten-Free Cookies, Tarts and Squares",Dessert,Dessert,1,person,5.0,5.0,,,Gluten-free,2 per person,
+Salishan Catering,Olalli West Coast Berries Mousse,Dessert,Dessert,1,person,7.95,7.95,,,Vegetarian,,
+Salishan Catering,Fresh Berries with Soap Berry Whip,Dessert,Dessert,1,person,,,,,Vegetarian,,Market price — contact for quote.
+Salishan Catering,Mini Lemon Meringue Tarts,Dessert,Dessert,1,piece,4.0,4.0,,,Vegetarian,,
+Salishan Catering,Double Chocolate Cake,Dessert,Dessert,1,person,7.95,7.95,,,Vegetarian,With chocolate cream cheese icing,
+Salishan Catering,Zucchini Cakes,Dessert,Dessert,1,person,7.95,7.95,,,Vegetarian,With lemon cream cheese icing,
+Salishan Catering,Mini Cinnamon Bannock,Dessert,Dessert,1,person,3.95,3.95,,,Vegetarian,2 per person,
+Salishan Catering,West Coast Gathering (Buffet Option A),Buffet,Dinner,1,person,50.0,50.0,20,people,,"2 salads, 1 starchy side, 1 vegetable, 1 main. Choose from Salishan's seasonal salad, side, vegetable and main selections.",Requires a minimum of 20 guests (inquire for smaller groups). Guests select 1 main course; allergy/dietary restrictions must be disclosed 5 days before the event.
+Salishan Catering,Welcoming Gathering (Buffet Option B),Buffet,Dinner,1,person,55.0,55.0,20,people,,"3 salads, 1 starchy side, 1 pasta, 1 vegetable, 2 mains. Choose from Salishan's seasonal salad, side, pasta, vegetable and main selections.",Requires a minimum of 20 guests (inquire for smaller groups). Guests select 1 main course; allergy/dietary restrictions must be disclosed 5 days before the event.
+Salishan Catering,Potlach Gathering (Buffet Option C),Buffet,Dinner,1,person,60.0,60.0,20,people,,"4 salads, 2 starchy sides, 1 pasta, 1 vegetable, 3 mains. Choose from Salishan's seasonal salad, side, pasta, vegetable and main selections.",Requires a minimum of 20 guests (inquire for smaller groups). Guests select 1 main course; allergy/dietary restrictions must be disclosed 5 days before the event.
+Salishan Catering,2-Course Plated Dinner,Plated,Dinner,1,person,45.0,45.0,20,people,,"1 salad, 3 mains, 1 starchy side, 1 vegetable. Choose from Salishan's seasonal salad, side, vegetable and main selections.",Requires a minimum of 20 guests (inquire for smaller groups). Guests select 1 main course; allergy/dietary restrictions must be disclosed 5 days before the event.
+Salishan Catering,3-Course Plated Dinner,Plated,Dinner,1,person,55.0,55.0,20,people,,"1 salad, 1 pasta, 3 mains, 1 starchy side, 1 vegetable. Choose from Salishan's seasonal salad, side, pasta, vegetable and main selections.",Requires a minimum of 20 guests (inquire for smaller groups). Guests select 1 main course; allergy/dietary restrictions must be disclosed 5 days before the event.
+Salishan Catering,4-Course Plated Dinner,Plated,Dinner,1,person,60.0,60.0,20,people,,"1 salad, 1 pasta, 3 mains, 1 starchy side, 1 vegetable, 1 dessert. Choose from Salishan's seasonal salad, side, pasta, vegetable and main selections.",Requires a minimum of 20 guests (inquire for smaller groups). Guests select 1 main course; allergy/dietary restrictions must be disclosed 5 days before the event.
+Salishan Catering,Additional Entree - Tenderloin,AddOn,Dinner,1,person,12.0,12.0,,,,Seared in mustard rosemary marinade with red wine demi-glaze. Add-on to a Feast package.,
+Salishan Catering,Additional Entree - Spiced Duck Breast,AddOn,Dinner,1,person,12.0,12.0,,,,With wild chokecherry compote. Add-on to a Feast package.,
+Salishan Catering,Additional Entree - Braised Venison Roast,AddOn,Dinner,1,person,12.0,12.0,,,Contains venison,With jus reduction. Add-on to a Feast package.,
+Salishan Catering,Additional Entree - Seared Haida Gwaii Halibut,AddOn,Dinner,1,person,12.0,12.0,,,Contains fish,Topped with warm roasted tomato and fresh thyme confit. Add-on to a Feast package.,
+Salishan Catering,Additional Entree - Orange and Honey Braised Fennel,AddOn,Dinner,1,person,12.0,12.0,,,Vegan,With grilled red onions. Add-on to a Feast package.,
+Salishan Catering,Vegetable Platter (Medium),Platter,Reception,1,platter,100.0,100.0,,,Vegan,Fresh seasonal vegetables with yogurt dill dip. Serves 15-20 guests.,
+Salishan Catering,Vegetable Platter (Large),Platter,Reception,1,platter,140.0,140.0,,,Vegan,Fresh seasonal vegetables with yogurt dill dip. Serves 20-30 guests.,
+Salishan Catering,Grilled Vegetable Platter (Medium),Platter,Reception,1,platter,110.0,110.0,,,Vegan,"Marinated and grilled seasonal vegetables, blackberry and lemony olive oil glaze. Serves 15-20 guests.",
+Salishan Catering,Grilled Vegetable Platter (Large),Platter,Reception,1,platter,150.0,150.0,,,Vegan,"Marinated and grilled seasonal vegetables, blackberry and lemony olive oil glaze. Serves 20-30 guests.",
+Salishan Catering,Fruit Platter (Medium),Platter,Reception,1,platter,100.0,100.0,,,Vegan,Sliced seasonal fruit and berries. Serves 15-20 guests.,
+Salishan Catering,Fruit Platter (Large),Platter,Reception,1,platter,140.0,140.0,,,Vegan,Sliced seasonal fruit and berries. Serves 20-30 guests.,
+Salishan Catering,Domestic Cheese Board (Medium),Platter,Reception,1,platter,140.0,140.0,,,Vegetarian,"Swiss, cheddar, Havarti, brie and smoked gouda with grapes, baguette, assorted crackers. Serves 15-20 guests.",
+Salishan Catering,Domestic Cheese Board (Large),Platter,Reception,1,platter,200.0,200.0,,,Vegetarian,"Swiss, cheddar, Havarti, brie and smoked gouda with grapes, baguette, assorted crackers. Serves 20-30 guests.",
+Salishan Catering,Imported Cheese Board (Medium),Platter,Reception,1,platter,180.0,180.0,,,Vegetarian,"French brie, Spanish Manchego, Danish blue, Boursin, Italian bocconcini, English applewood smoked cheddar, Dutch Edam with grapes, berries, bannock, baguette, crackers. Serves 15-20 guests.",
+Salishan Catering,Imported Cheese Board (Large),Platter,Reception,1,platter,240.0,240.0,,,Vegetarian,"French brie, Spanish Manchego, Danish blue, Boursin, Italian bocconcini, English applewood smoked cheddar, Dutch Edam with grapes, berries, bannock, baguette, crackers. Serves 20-30 guests.",
+Salishan Catering,The Shishalh Cheese Board (Medium),Platter,Reception,1,platter,180.0,180.0,,,Vegetarian,"Local artisan cheese with fresh berries, assorted grapes, dried fruit, fig jam, house-made lavender crostini, baguette and artisan crackers. Serves 15-20 guests.",
+Salishan Catering,The Shishalh Cheese Board (Large),Platter,Reception,1,platter,240.0,240.0,,,Vegetarian,"Local artisan cheese with fresh berries, assorted grapes, dried fruit, fig jam, house-made lavender crostini, baguette and artisan crackers. Serves 20-30 guests.",
+Salishan Catering,Musqueam First Nation Trio Dips (Small),Platter,Reception,1,platter,60.0,60.0,,,Vegetarian,"Choose any 3: fiddlehead fern dip, stinging nettle green goddess, hummus, roasted red pepper hummus, roasted corn/smoked tomato/avocado dip, feta and herb dip, lemony white bean dip. 1 cup of each dip, with olives, fried chickpea, crostini and bannock.",
+Salishan Catering,Musqueam First Nation Trio Dips (Medium),Platter,Reception,1,platter,90.0,90.0,,,Vegetarian,"Choose any 3 dips (see Small). 2 cups of each dip, with olives, fried chickpea, crostini and bannock.",
+Salishan Catering,Musqueam First Nation Trio Dips (Large),Platter,Reception,1,platter,120.0,120.0,,,Vegetarian,"Choose any 3 dips (see Small). 3 cups of each dip, with olives, fried chickpea, crostini and bannock.",
+Salishan Catering,Traditional Charcuterie (Small),Platter,Reception,1,platter,180.0,180.0,,,,"Cured meats such as prosciutto, Genoa salami, mortadella, chorizo sausage, Tuscan ham, pate with mustards, chutneys and bannock crisps.",
+Salishan Catering,Traditional Charcuterie (Large),Platter,Reception,1,platter,240.0,240.0,,,,"Cured meats such as prosciutto, Genoa salami, mortadella, chorizo sausage, Tuscan ham, pate with mustards, chutneys and bannock crisps.",
+Salishan Catering,Sparrow Brothers Charcuterie (Large),Platter,Reception,1,platter,300.0,300.0,,,Contains venison and bison,"Cured, smoked or dried meats such as elk, buffalo, venison and deer with pates, mustards, chutneys, mini bannock and baguettes.",
+Salishan Catering,Mucamuck Antipasto Platter (Medium),Platter,Reception,1,platter,200.0,200.0,,,Vegetarian,"Grilled vegetables, sea asparagus fritters, Boursin stuffed tomatoes with wild celery shoots, toasted hazelnut and goat cheese lollipops, feta and herb dip with olives, mini bannock or crusty bread.",
+Salishan Catering,Mucamuck Antipasto Platter (Large),Platter,Reception,1,platter,300.0,300.0,,,Vegetarian,"Grilled vegetables, sea asparagus fritters, Boursin stuffed tomatoes with wild celery shoots, toasted hazelnut and goat cheese lollipops, feta and herb dip with olives, mini bannock or crusty bread.",
+Salishan Catering,Naha Antipasto Platter (Small),Platter,Reception,1,platter,150.0,150.0,,,,"Seasonal grilled vegetables, Genoa salami, rosemary ham, blackberry glazed venison meatballs, assorted cheeses, lemony white bean dip, mini bannock or crusty bread.",
+Salishan Catering,Naha Antipasto Platter (Large),Platter,Reception,1,platter,250.0,250.0,,,,"Seasonal grilled vegetables, Genoa salami, rosemary ham, blackberry glazed venison meatballs, assorted cheeses, lemony white bean dip, mini bannock or crusty bread.",
+Salishan Catering,Nootka Sound Prawn Platter (Medium),Platter,Reception,1,platter,180.0,180.0,,,Contains shellfish,Traditional jumbo poached prawns with house-made cocktail sauce and lemon wedges.,
+Salishan Catering,Nootka Sound Prawn Platter (Large),Platter,Reception,1,platter,240.0,240.0,,,Contains shellfish,Traditional jumbo poached prawns with house-made cocktail sauce and lemon wedges.,
+Salishan Catering,Clayoquot Sound Prawn Platter (Medium),Platter,Reception,1,platter,200.0,200.0,,,Contains shellfish,Maple marinated and seaweed salted grilled prawns with wild garlic and rhubarb aioli.,
+Salishan Catering,Clayoquot Sound Prawn Platter (Large),Platter,Reception,1,platter,260.0,260.0,,,Contains shellfish,Maple marinated and seaweed salted grilled prawns with wild garlic and rhubarb aioli.,
+Salishan Catering,Clam Fritter Platter (Medium),Platter,Reception,1,platter,100.0,100.0,,,Contains shellfish,Plump coated clam fritters with house-made tartar sauce and seaweed. Served at room temperature.,
+Salishan Catering,Clam Fritter Platter (Large),Platter,Reception,1,platter,160.0,160.0,,,Contains shellfish,Plump coated clam fritters with house-made tartar sauce and seaweed. Served at room temperature.,
+Salishan Catering,Smoked Salmon Pate and Bannock (Small),Platter,Reception,1,platter,50.0,50.0,,,Contains salmon,1 cup of pate and 20 mini bannocks.,Salishan's most popular platter.
+Salishan Catering,Smoked Salmon Pate and Bannock (Medium),Platter,Reception,1,platter,100.0,100.0,,,Contains salmon,2 cups of pate and 40 mini bannocks.,Salishan's most popular platter.
+Salishan Catering,Smoked Salmon Pate and Bannock (Large),Platter,Reception,1,platter,150.0,150.0,,,Contains salmon,3 cups of pate and 90 mini bannocks.,Salishan's most popular platter.
+Salishan Catering,Salishan Salmon Platter (Medium),Platter,Reception,1,platter,160.0,160.0,,,Contains salmon,"Herb, garlic and grated lemon zest marinated grilled sides of Pacific salmon with sea asparagus and caper creme fraiche and smoked tomato jam.",
+Salishan Catering,Salishan Salmon Platter (Large),Platter,Reception,1,platter,200.0,200.0,,,Contains salmon,"Herb, garlic and grated lemon zest marinated grilled sides of Pacific salmon with sea asparagus and caper creme fraiche and smoked tomato jam.",
+Salishan Catering,Chinook Trio of Salmon Platter (Medium),Platter,Reception,1,platter,180.0,180.0,,,Contains salmon,"Chinook smoked salmon, alder smoked salmon pate and grilled sockeye with cream cheese, lemon wedges, capers, onions, bannock or rye bread.",
+Salishan Catering,Chinook Trio of Salmon Platter (Large),Platter,Reception,1,platter,240.0,240.0,,,Contains salmon,"Chinook smoked salmon, alder smoked salmon pate and grilled sockeye with cream cheese, lemon wedges, capers, onions, bannock or rye bread.",
+Salishan Catering,Beef Tenderloin Platter (Large),Platter,Reception,1,platter,250.0,250.0,,,,"Black pepper and juniper spiced beef tenderloin served medium rare with grainy mustard, dijon mustard, caramelized onion, horseradish and cedar jelly, with mini buns or mini bannock.",

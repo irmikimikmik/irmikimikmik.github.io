@@ -52,8 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Industry Experience
   renderTimeline('industry-list', window.industryExperienceData);
 
-  // ---- Community Involvement and Volunteerism
-  renderTimeline('community-list', window.communityData);
+  // ---- Gender Diversity
+  renderTimeline('gender-diversity-list', window.genderDiversityData);
+
+  // ---- Indigenous Initiatives
+  renderTimeline('indigenous-list', window.indigenousData);
 
   // ---- Athletic Achievements and Scholarships
   renderTimeline('athletic-list', window.athleticData);
